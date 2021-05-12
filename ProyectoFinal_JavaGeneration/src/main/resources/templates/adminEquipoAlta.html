@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+	<link rel="stylesheet" th:href="@{/css/custom.css}" /> -->
+	<title>ProyectoFinal_JavaGeneration</title>
+</head>
+<body>
+	<div class="container" id="contenedor">
+		<h1>Prueba AdminAlta</h1>
+		<h2>FORMULARIO DE ALTA NUEVO EMPLEADO (add / "edit todavia no esta")</h2>
+		<form method="post" th:action="@{/guardarEmpleado}" th:object="${empleado}">
+			<input id="id" th:field="*{id}" hidden />
+			<table>
+				<tr>
+					<td><label for="nombre">Nombre:</label></td>
+					<td><input type="text" th:field="*{nombre}" /></td>
+				</tr>
+				<tr>
+					<td><label for="apellidos">Apellidos:</label></td>
+					<td><input type="text" th:field="*{apellidos}" /></td>
+				</tr>
+				<tr>
+					<td><label for="resumen">Resumen:</label></td>
+					<td><input type="text" th:field="*{resumen}" /></td>
+				</tr>
+				<tr>
+					<td><label for="foto">Foto:</label></td>
+					<td><input type="text" th:field="*{foto}" /></td>
+				</tr>
+				<tr>
+					<!--<td><label for="cargo">Cargo:</label></td>
+                    <td><input type="text" th:field="*{cargo}" /></td>-->
+					<th>Cargo</th>
+					<td>
+						<select name="cargo">
+							<!-- <option value=""> Seleccione </option> -->
+							<option th:each="cargo:${cargos}" th:value="${cargo.id}" th:text="${cargo.cargo}">
+								<!--  th:attr="selected=${userInfo.departmentCode==cargo.id?true:false}" --> 
+							</option>
+						</select>
+				</tr>
+			</table>
+			<input type="submit" value="Guardar empleado">
+		</form>
+	</div>
+</body>
+</html>

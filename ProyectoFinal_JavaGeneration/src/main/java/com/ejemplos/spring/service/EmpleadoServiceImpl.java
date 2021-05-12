@@ -29,5 +29,11 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 	public List<Empleado> listarEquipoAdmin() {
 		return empleadoRepo.findAll();
 	}
+	
+	//Metodo para guardar un nuevo empleado
+		@Override
+		public void guardarEmpleado(Empleado empleado) {
+			empleadoRepo.save(empleado);	
+		}
 
 }

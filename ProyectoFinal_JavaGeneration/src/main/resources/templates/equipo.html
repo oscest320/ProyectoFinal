@@ -32,6 +32,7 @@
     <title>Equipo</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+
 </head>
 
 <body>
@@ -71,6 +72,7 @@
     
 
     <main>
+
     
     <section id="fondo-metodos">
         <div id="metodos" class ="container">
@@ -116,29 +118,25 @@
             <h2>NUESTRO EQUIPO</h2>
             <div class="row">
             
-          
-
-
+         
 
                 <div id="real" class="col-sm-12 col-md-4 col-lg-4" th:each="empleado: ${equipoList}">
                     <img th:src="${empleado.foto}" alt="">
                     <h3 th:text="${empleado.nombre} + ' ' + ${empleado.apellidos}"></h3>
+
                     <h5 th:text="${empleado.cargo.getCargo()}"></h5>
                     <p th:text="${empleado.resumen}"></p>
                 </div>
                 
+
                <div id="falso" class="col-sm-12 col-md-4 col-lg-4" th:each="empleado, status:${listaEmpFalsos}">
-              
-              <!--  <img src="https://source.unsplash.com/random/300x200?sig=${Math.random()*${empleado.id}}" alt=""> -->
                <img th:src="@{'https://picsum.photos/200/300?random=' + ${empleado.id}}" alt="">
                     <h3 th:text="${empleado.nombre} + ' ' + ${empleado.apellidos}"></h3>
                    <!--  <h5 th:text="${empleado.cargo.getCargo()}"></h5> --> 
                     <p th:text="${empleado.resumen}"></p>
                 </div> 
                 
-            <!--  <tr th:each="user, status:${userList}">
-                <td th:text="${status.index+1}" /> -->
-
+        
                
             </div>
 

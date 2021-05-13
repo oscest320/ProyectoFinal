@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -30,7 +31,7 @@
 		<form method="post" th:action="@{/guardarEmpleado}" th:object="${empleado}">
 			<input id="id" th:field="*{id}" hidden />
 			<table class="table table-striped">
-				<tr>
+	<tr>
 					<td><label for="nombre">Nombre:</label></td>
 					<td><input type="text" th:field="*{nombre}" /></td>
 				</tr>
@@ -49,21 +50,29 @@
 				<tr>
 					<!--<td><label for="cargo">Cargo:</label></td>
                     <td><input type="text" th:field="*{cargo}" /></td>-->
+
 					<<td><label for="nombre">Cargo:</label></td>
+
+					
+
 					<td>
 						<select name="cargo">
 							<!-- <option value=""> Seleccione </option> -->
 							<option th:each="cargo:${cargos}" th:value="${cargo.id}" th:text="${cargo.cargo}">
-								<!--  th:attr="selected=${userInfo.departmentCode==cargo.id?true:false}" --> 
+								
 							</option>
 						</select>
 				</tr>
 			</table>
 			<input type="submit" value="Guardar empleado">
+
 			
 		</form>
 		</div>
 	</div>
 </body>
 </html>
+
+
+	
 

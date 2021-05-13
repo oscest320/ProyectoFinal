@@ -23,7 +23,11 @@ header {
 }
 
 main{
+
 	padding-top: 1%;
+
+	
+
 }
 h1{
 	color: black;
@@ -44,7 +48,8 @@ h4{
 
 p{
 	color: black;
-	
+	font-weight: bold;
+
 	text-align: justify;
 }
 
@@ -63,6 +68,7 @@ img{
     width: 100%;
 	
 }
+
 
 
 #real{
@@ -101,6 +107,13 @@ text-align: center;
 
 #falso p{
 text-align: center;
+
+#equipo h2{
+	font-weight: bold;
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 1%;
+
 }
 
 .btn-primary {
@@ -147,21 +160,36 @@ text-align: center;
 
 
 
+
 #metodos{
 	text-align: center;	
 	height: auto;
+  padding-bottom: 2%;
+  }
+	
+
+#fondo-metodos{
+	background-color: rgba(245, 177, 30, 0.13);
+	height: auto;
 	
 }
+
 
 #metodos h2{
 	font-weight: bold;
 	text-align: center;
 	padding-top: 3%;
+
 	padding-bottom: 1%;	
 }
 
 #metodos h3{
 	margin-bottom: -1%;
+
+	padding-bottom: 1%;
+	
+	
+
 }
 
 #metodos h5{
@@ -171,14 +199,15 @@ text-align: center;
 #metodos i{
 	color:rgb(224, 157, 12);
 	font-size: 2.5em;
+
 	margin-bottom: 5%;
 
 }
 
 #metodos p{
 	text-align: center;
+	margin-bottom: 3%;
 
-	margin-bottom: 10%;
 }
 
 

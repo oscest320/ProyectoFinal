@@ -14,7 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ejemplos.spring.model.Empleado;
 import com.ejemplos.spring.repository.CargoRepository;
+
 import com.ejemplos.spring.service.ClientEmpleadosFalsosService;
+
 import com.ejemplos.spring.service.EmpleadoService;
 
 /**
@@ -34,8 +36,10 @@ public class EmpleadoController {
 	EmpleadoService service;
 	@Autowired
 	CargoRepository cargos;
+
 	@Autowired
 	ClientEmpleadosFalsosService serv;
+
 
 	private static final Logger log = LoggerFactory.getLogger(EmpleadoController.class);
 

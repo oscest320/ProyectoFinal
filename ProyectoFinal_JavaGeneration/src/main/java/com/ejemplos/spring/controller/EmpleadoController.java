@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ejemplos.spring.model.Empleado;
-import com.ejemplos.spring.repository.CargoRepository;
+import com.ejemplos.spring.model.EmpleadoFalso;
+import com.ejemplos.spring.service.CargoService;
 
 import com.ejemplos.spring.service.ClientEmpleadosFalsosService;
 
@@ -35,7 +36,7 @@ public class EmpleadoController {
 	@Autowired
 	EmpleadoService service;
 	@Autowired
-	CargoRepository cargos;
+	CargoService cargos;
 
 	@Autowired
 	ClientEmpleadosFalsosService serv;
@@ -64,7 +65,7 @@ public class EmpleadoController {
 		m.addAttribute("equipoList", service.listarEquipo());
 		log.info("------" + service.listarEquipo());
 		//este metodo invoca la url de /random/persons y devuelve la listaEmplFalso [eF1, eF2, etc]
-				List<Empleado> listaEmplFalsos = new ArrayList<>();
+				List<EmpleadoFalso> listaEmplFalsos = new ArrayList<>();
 				listaEmplFalsos.addAll(serv.leerEmplFalsosCollection());
 				m.addAttribute("listaEmpFalsos", listaEmplFalsos);
 				
@@ -77,7 +78,7 @@ public class EmpleadoController {
 	@GetMapping("/admin/equipo/alta")
 	public String altaEmpleado(Empleado empleado, Model m) {
 		log.info("----- Entrando en altaEmpleado");
-		m.addAttribute("cargos", cargos.findAll());
+		m.addAttribute("cargos", cargos.listarCargos());
 		return "adminEquipoAlta";
 	}
 	

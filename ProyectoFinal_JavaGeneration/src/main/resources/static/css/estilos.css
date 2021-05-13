@@ -26,9 +26,9 @@ main{
 
 	padding-top: 1%;
 
-	
-
 }
+
+
 h1{
 	color: black;
 	margin-bottom: 5%;
@@ -101,6 +101,14 @@ text-align: center;
 	font-weight: bold;
 }
 
+#equipo h2{
+	font-weight: bold;
+	text-align:center;
+	padding-top: 3%;
+	padding-bottom: 1%;
+
+}
+
 #falso{
 text-align: center;
 }
@@ -108,14 +116,8 @@ text-align: center;
 #falso p{
 text-align: center;
 
-#equipo h2{
-	font-weight: bold;
-	text-align: center;
-	padding-top: 3%;
-	padding-bottom: 1%;
 
 }
-
 .btn-primary {
   color: #fff;
   background-color:rgb(224, 157, 12);
@@ -169,7 +171,7 @@ text-align: center;
 	
 
 #fondo-metodos{
-	background-color: rgba(245, 177, 30, 0.13);
+	
 	height: auto;
 	
 }

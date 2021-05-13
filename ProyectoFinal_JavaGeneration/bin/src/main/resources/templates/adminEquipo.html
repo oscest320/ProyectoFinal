@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<!-- INSERTAR ARCHIVOS CSS
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+<link rel="stylesheet" th:href="@{/css/custom.css}" />
+-->
+	<title>ProyectoFinal_JavaGeneration</title>
+</head>
+<body>
+	<div class="container" id="contenedor">
+		<div align="center">
+			<h1>
+				Prueba AdminEquipo<br />
+			</h1>
+			<h2>Listado de empleados</h2>
+			<p>Estos son los datos de la tabla de empleados</p>
+			<table border="1">
+				<thead>
+					<tr>
+						<th> id </th>
+						<th> Nombre </th>
+						<th> Apellidos </th>
+						<th> Resumen </th>
+						<th> Foto </th>
+						<th> Cargo </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="empleado : ${equipoList}">
+						<td th:text="${empleado.id}" />
+						<td th:text="${empleado.nombre}" />
+						<td th:text="${empleado.apellidos}" />
+						<td th:text="${empleado.resumen}" />
+						<td th:text="${empleado.foto}" />
+						<td th:text="${empleado.cargo.getCargo()}" />
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				<a href="/admin/equipo/alta">Alta empleado</a>
+			</p>
+			
+		</div>
+	</div>
+</body>
+</html>

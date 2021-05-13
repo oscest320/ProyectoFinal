@@ -12,4 +12,7 @@ public interface EmpleadoService {
 	
 	//Metodo que muestra un listado de los integrantes del equipo de la empresa al Usuario
 	public List<Empleado> listarEquipo();
+	
+	//Metodo para guardar un nuevo empleado
+	public void guardarEmpleado(Empleado empleado);
 }

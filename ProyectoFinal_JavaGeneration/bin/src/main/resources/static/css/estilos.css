@@ -1,0 +1,209 @@
+*{
+	box-sizing: border-box;
+}
+
+body {
+
+	margin: 0px;
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+header {
+	width: 100%;
+	background-color: rgba(0,0,0,0.77);
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 1px;;
+	
+}
+
+main{
+	padding-top: 5%;
+}
+h1{
+	color: black;
+	margin-bottom: 5%;
+
+	text-align: center;
+	
+}
+
+h4{
+	color: black;
+	font-style: italic;
+	margin-bottom: 5%;
+	padding-top:5%;
+	padding-left: 10%;
+}
+
+p{
+	color: black;
+	font-weight: bold;
+	text-align: justify;
+}
+
+ul{
+	color: black;
+	font-weight: bold;
+}
+
+li{
+	margin:2%;
+}
+
+img{
+	display: block;
+	height: auto;
+    width: 100%;
+	
+}
+
+
+#equipo h2{
+	font-weight: bold;
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 1%;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color:rgb(224, 157, 12);
+  width: 15vh;
+  border-color: #007bff;
+  border-radius: 25px;
+  margin-top: 2%;
+	border: 1px solid #FFFFFF;
+	transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  color: black;
+  background-color: #fff;
+  border-color: #0062cc;
+  border: 1px solid rgb(224, 157, 12);
+}
+
+#disabledTextInput{
+	background-color: rgba(158, 143, 143, 0.357);
+	border-radius: 25px;
+	color: black;
+	margin-top: 2%;
+}
+
+#formulario{
+	padding-left: 10%;
+}
+#formulario a{
+	font-style: italic;
+	color: honeydew;
+	font-weight: bold;
+	color: rgb(0, 0, 0);;
+}
+
+
+.logo{
+	width: 20vh;
+	height:7.5vh;
+	margin-bottom: 1%;
+}
+
+#fondo-metodos{
+	background-color: rgba(245, 177, 30, 0.13);
+	height: auto;
+	
+}
+
+#metodos{
+	text-align: center;
+	
+	height: auto;
+	padding-bottom: 2%;
+}
+
+#metodos h2{
+	font-weight: bold;
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 1%;
+	
+	
+}
+
+#metodos h5{
+	font-weight: bold;
+}
+
+#metodos i{
+	color:rgb(224, 157, 12);
+	font-size: 2.5em;
+	margin-bottom: 3%;
+
+}
+
+#fondo-empresas{
+	background-color: rgba(230, 221, 221, 0.815);
+}
+
+#empresas{
+
+	height: auto;
+	width: 100%;
+	
+	margin-top: 0%;
+	padding-bottom: 2%;
+	text-align: center;
+}
+
+
+#empresas h2{
+	font-weight: bold;
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 1%;
+	
+}
+
+
+
+
+
+footer {
+	height: auto;
+	width: 100%;
+    background-color: rgba(0,0,0,0.77);
+	margin-bottom: 0;
+	padding-top: 1%;
+	padding-bottom: 0;
+	bottom: 0;
+	
+}
+
+footer i {
+    color: white;
+    font-size: 2em;
+    margin: 2%;
+	transition: all 0.3s ease;
+	padding: 4%;
+}
+
+footer i:hover {
+	color: rgb(224, 157, 12);
+	font-size: 2.5em;
+
+}
+
+footer p{
+color: white;
+}
+
+footer a{
+	font-style: italic;
+	color: gray;
+	margin-top: 10%;
+}

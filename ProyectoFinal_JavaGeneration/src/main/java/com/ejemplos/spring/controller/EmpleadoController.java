@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ejemplos.spring.model.Empleado;
 import com.ejemplos.spring.model.EmpleadoFalso;
-import com.ejemplos.spring.repository.CargoRepository;
+import com.ejemplos.spring.service.CargoService;
 
 import com.ejemplos.spring.service.ClientEmpleadosFalsosService;
 
@@ -36,7 +36,7 @@ public class EmpleadoController {
 	@Autowired
 	EmpleadoService service;
 	@Autowired
-	CargoRepository cargos;
+	CargoService cargos;
 
 	@Autowired
 	ClientEmpleadosFalsosService serv;
@@ -78,7 +78,7 @@ public class EmpleadoController {
 	@GetMapping("/admin/equipo/alta")
 	public String altaEmpleado(Empleado empleado, Model m) {
 		log.info("----- Entrando en altaEmpleado");
-		m.addAttribute("cargos", cargos.findAll());
+		m.addAttribute("cargos", cargos.listarCargos());
 		return "adminEquipoAlta";
 	}
 	

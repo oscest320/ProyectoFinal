@@ -2,36 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
-   
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-  
-  
-	<title>BackOffice</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+	<link rel="stylesheet" th:href="@{/css/custom.css}" /> -->
+	<title>ProyectoFinal_JavaGeneration</title>
 </head>
 <body>
-<nav id="backoffice" class="navbar navbar-expand-lg  bg-dark static-top">
-            <div class="container">
-            
-            <h2 span style="color:rgb(255, 255, 255)">BackOffice</h2>
-        </nav>
-
-
 	<div class="container" id="contenedor">
-			<div align="center">
-		<h1>Alta Empleados</h1>
+		<h1>Prueba AdminAlta</h1>
 		<h2>FORMULARIO DE ALTA NUEVO EMPLEADO (add / "edit todavia no esta")</h2>
 		<form method="post" th:action="@{/guardarEmpleado}" th:object="${empleado}">
 			<input id="id" th:field="*{id}" hidden />
-			<table class="table table-striped">
-	<tr>
+			<table>
+				<tr>
 					<td><label for="nombre">Nombre:</label></td>
 					<td><input type="text" th:field="*{nombre}" /></td>
 				</tr>
@@ -50,29 +34,18 @@
 				<tr>
 					<!--<td><label for="cargo">Cargo:</label></td>
                     <td><input type="text" th:field="*{cargo}" /></td>-->
-
-					<<td><label for="nombre">Cargo:</label></td>
-
-					
-
+					<th>Cargo</th>
 					<td>
 						<select name="cargo">
 							<!-- <option value=""> Seleccione </option> -->
 							<option th:each="cargo:${cargos}" th:value="${cargo.id}" th:text="${cargo.cargo}">
-								
+								<!--  th:attr="selected=${userInfo.departmentCode==cargo.id?true:false}" --> 
 							</option>
 						</select>
 				</tr>
 			</table>
 			<input type="submit" value="Guardar empleado">
-
-			
 		</form>
-		</div>
 	</div>
 </body>
 </html>
-
-
-	
-

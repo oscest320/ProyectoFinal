@@ -32,7 +32,7 @@
     <title>Equipo</title>
 
     <link rel="stylesheet" href="css/estilos.css">
-
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -72,71 +72,24 @@
     
 
     <main>
-
-    
-    <section id="fondo-metodos">
-        <div id="metodos" class ="container">
-            <h2>NUESTRA MISIÓN</h2>
-            <h3>Queremos construir una compañía líder en Transformación Digital a través de la unión de personas, tecnología y negocio.</h3>
-            <h2>Y para ello...</h2>
-            <div class = "row">
-                
-                <div class="col-sm-12 col-md-6 col-lg-3">
-
-                    <i class="fas fa-lightbulb"></i>
-                    <h5>IDEAMOS</h5>
-                    
-
-                    <p>Organizamos sesiones conjuntas de equipo y planteamos métodos de design thinking para extraer y ordenar las mejores ideas</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                    
-                    <i class="fas fa-palette"></i>
-                    <h5>DISEÑAMOS</h5>
-                    <p>Investigamos a tu cliente/usuario para ponernos en su piel y diseñamos con metodologías ágiles la mejor solución para empezar a construir un MVP</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                    
-                    <i class="fas fa-hammer"></i>
-                    <h5>CONSTRUIMOS</h5>
-                    <p>Buscamos la mejor solución tecnológica para tu proyecto, diseñamos la interfaz y la experiencia y lo prototipamos</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                    
-                <!--<i class="fas fa-puzzle-piece"></i> -->
-                    <i class="fas fa-cubes"></i>
-                    <h5>TESTAMOS/ESCALAMOS</h5>
-                    <p>Probamos y validamos el MVP, sacamos a producción y lo testamos con usuarios, medimos y corregimos o escalamos</p>
-                </div>
-                
-            </div>
-
-        </div>
-     </section>
-     
         <section id="equipo" class="container pt-2">
-            <h2>NUESTRO EQUIPO</h2>
+            <h1>NUESTRO EQUIPO</h1>
             <div class="row">
-            
-         
 
-                <div id="real" class="col-sm-12 col-md-4 col-lg-4" th:each="empleado: ${equipoList}">
+
+                <div class="col-sm-12 col-md-4 col-lg-4" th:each="empleado: ${equipoList}">
                     <img th:src="${empleado.foto}" alt="">
-                    <h3 th:text="${empleado.nombre} + ' ' + ${empleado.apellidos}"></h3>
-
+                    <h3 th:text="${empleado.nombre} + ${empleado.apellidos}"></h3>
                     <h5 th:text="${empleado.cargo.getCargo()}"></h5>
                     <p th:text="${empleado.resumen}"></p>
                 </div>
                 
-
-               <div id="falso" class="col-sm-12 col-md-4 col-lg-4" th:each="empleado, status:${listaEmpFalsos}">
-               <img th:src="@{'https://picsum.photos/200/300?random=' + ${empleado.id}}" alt="">
-                    <h3 th:text="${empleado.nombre} + ' ' + ${empleado.apellidos}"></h3>
-                   <!--  <h5 th:text="${empleado.cargo.getCargo()}"></h5> --> 
+               <!--  <div class="col-sm-12 col-md-4 col-lg-4" th:each="empleado: ${equipoList}">
+                    <img src="img/img01.jpg" alt="">
+                    <h3 th:text="${empleado.nombre} + ${empleado.apellidos}"></h3>
+                    <h5 th:text="${empleado.cargo.getCargo()}"></h5>
                     <p th:text="${empleado.resumen}"></p>
-                </div> 
-                
-        
+                </div>  -->
                
             </div>
 

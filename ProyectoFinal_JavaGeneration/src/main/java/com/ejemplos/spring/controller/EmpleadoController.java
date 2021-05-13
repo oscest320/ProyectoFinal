@@ -1,5 +1,8 @@
 package com.ejemplos.spring.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ejemplos.spring.model.Empleado;
 import com.ejemplos.spring.repository.CargoRepository;
+
+import com.ejemplos.spring.service.ClientEmpleadosFalsosService;
+
 import com.ejemplos.spring.service.EmpleadoService;
 
 /**
@@ -30,6 +36,10 @@ public class EmpleadoController {
 	EmpleadoService service;
 	@Autowired
 	CargoRepository cargos;
+
+	@Autowired
+	ClientEmpleadosFalsosService serv;
+
 
 	private static final Logger log = LoggerFactory.getLogger(EmpleadoController.class);
 
@@ -53,6 +63,12 @@ public class EmpleadoController {
 		log.info("----- Entrando en listarEquipo");
 		m.addAttribute("equipoList", service.listarEquipo());
 		log.info("------" + service.listarEquipo());
+		//este metodo invoca la url de /random/persons y devuelve la listaEmplFalso [eF1, eF2, etc]
+				List<Empleado> listaEmplFalsos = new ArrayList<>();
+				listaEmplFalsos.addAll(serv.leerEmplFalsosCollection());
+				m.addAttribute("listaEmpFalsos", listaEmplFalsos);
+				
+			
 		return "equipo";
 	}
 

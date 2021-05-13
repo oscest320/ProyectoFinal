@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `javageneration` /*!40100 DEFAULT CHARACTER SET u
 USE `javageneration`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: javageneration
+-- Host: localhost    Database: javageneration
 -- ------------------------------------------------------
 -- Server version	8.0.22
 
@@ -28,7 +28,7 @@ CREATE TABLE `cargos` (
   `idcargo` int NOT NULL AUTO_INCREMENT,
   `cargo` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idcargo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `cargos` (
 
 LOCK TABLES `cargos` WRITE;
 /*!40000 ALTER TABLE `cargos` DISABLE KEYS */;
-INSERT INTO `cargos` VALUES (1,'Lechón1'),(2,'Lechón2'),(3,'Lechón3'),(4,'Lechón4'),(5,'Lechón5');
+INSERT INTO `cargos` VALUES (1,'CEO'),(2,'Head of Development'),(3,'IT Manager'),(4,'Communications Manager'),(5,'FullStack Developer'),(6,'Master del Universo');
 /*!40000 ALTER TABLE `cargos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -58,7 +58,7 @@ CREATE TABLE `equipo` (
   PRIMARY KEY (`idpersona`),
   KEY `car_fk_cargos` (`idcargo`),
   CONSTRAINT `car_fk_cargo` FOREIGN KEY (`idcargo`) REFERENCES `cargos` (`idcargo`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `equipo` (
 
 LOCK TABLES `equipo` WRITE;
 /*!40000 ALTER TABLE `equipo` DISABLE KEYS */;
-INSERT INTO `equipo` VALUES (1,'Javier','Jiménez',NULL,NULL,1),(2,'Silvia','López',NULL,NULL,2),(3,'Óscar','Estrada',NULL,NULL,3),(4,'Usoa','Larrarte',NULL,NULL,4),(5,'Noemí','De La Mata',NULL,NULL,5);
+INSERT INTO `equipo` VALUES (1,'Óscar','Estrada','Fundador de la empresa, una persona ordenada, diligente y muy positiva de cara al futuro. Siempre está animando a su equipo para dar el 100% en cada trabajo. Su paciencia y persistencia ante las dificultades le hacen alguien en quien confiar.','fotos/oscar.png',1),(2,'Usoa','Larrate','Encargada del área de desarrollo, es autodidacta, trabajadora, muy responsable y social. Cuando tenemos un nuevo trabajo ella es la que mejor se adapta para que el producto satisfaga las necesidades del cliente. Una persona fuerte y decidida.','fotos/usoa.png',2),(3,'Noemí','De la Mata','Especialista DevOps. Una persona muy agradable y animada que siempre da el 200% en cada uno de los proyectos. Ordenada, proactiva y siempre preparada para investigar y aprender todo lo necesario para asegurar el éxito de los proyectos.','fotos/noemi.png',3),(4,'Silvia','López','Directora de comunicación de la empresa con varios años de experiencia en diversas consultoras. Puntual, responsable, educada, una fuente de inspiración para los demás trabajadores de la empresa.','fotos/silvia.png',4),(5,'Javier','Jiménez','Experto en Cyberseguridad. Es el programador que a todo equipo le gustaría tener. Polivalente, perseverante y muy positivo que no se rinde ante los problemas y siempre muestra su mejor cara.','fotos/javi.png',5),(6,'Antonio','Santos','Cualquier cosa que pretendas hacer, ÉL ya la ha hecho. Pese a sus 29 años, lleva trabajando en el mundo IT más de 15 y ha colaborado con las mejores empresas del sector. En sus ratos libres es Youtuber.','fotos/antonio.png',6);
 /*!40000 ALTER TABLE `equipo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -80,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-11 13:49:29
+-- Dump completed on 2021-05-13  9:56:26

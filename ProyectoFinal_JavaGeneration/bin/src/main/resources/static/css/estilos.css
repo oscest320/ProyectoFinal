@@ -23,8 +23,12 @@ header {
 }
 
 main{
-	padding-top: 5%;
+
+	padding-top: 1%;
+
 }
+
+
 h1{
 	color: black;
 	margin-bottom: 5%;
@@ -32,6 +36,7 @@ h1{
 	text-align: center;
 	
 }
+
 
 h4{
 	color: black;
@@ -44,6 +49,7 @@ h4{
 p{
 	color: black;
 	font-weight: bold;
+
 	text-align: justify;
 }
 
@@ -64,13 +70,54 @@ img{
 }
 
 
+
+#real{
+	text-align: center;
+}
+
+#real h5{
+	font-style: italic;
+}
+
+#real p{
+	text-align: center;
+}
 #equipo h2{
 	font-weight: bold;
 	text-align: center;
-	padding-top: 3%;
-	padding-bottom: 1%;
+	padding-bottom: 2%;
+	padding-top: 3%;;
+	border-top: 2px dashed rgb(224, 157, 12);
 }
 
+#equipo img{
+	width: 50%;
+	display:block;
+margin:auto;
+text-align: center;
+}
+#equipo h3{
+	margin-top: 3%;
+	font-weight: bold;
+}
+
+#equipo h2{
+	font-weight: bold;
+	text-align:center;
+	padding-top: 3%;
+	padding-bottom: 1%;
+
+}
+
+#falso{
+text-align: center;
+}
+
+#falso p{
+text-align: center;
+
+
+}
 .btn-primary {
   color: #fff;
   background-color:rgb(224, 157, 12);
@@ -113,26 +160,38 @@ img{
 	margin-bottom: 1%;
 }
 
+
+
+
+#metodos{
+	text-align: center;	
+	height: auto;
+  padding-bottom: 2%;
+  }
+	
+
 #fondo-metodos{
-	background-color: rgba(245, 177, 30, 0.13);
+	
 	height: auto;
 	
 }
 
-#metodos{
-	text-align: center;
-	
-	height: auto;
-	padding-bottom: 2%;
-}
 
 #metodos h2{
 	font-weight: bold;
 	text-align: center;
 	padding-top: 3%;
+
+	padding-bottom: 1%;	
+}
+
+#metodos h3{
+	margin-bottom: -1%;
+
 	padding-bottom: 1%;
 	
 	
+
 }
 
 #metodos h5{
@@ -142,9 +201,17 @@ img{
 #metodos i{
 	color:rgb(224, 157, 12);
 	font-size: 2.5em;
+
+	margin-bottom: 5%;
+
+}
+
+#metodos p{
+	text-align: center;
 	margin-bottom: 3%;
 
 }
+
 
 #fondo-empresas{
 	background-color: rgba(230, 221, 221, 0.815);

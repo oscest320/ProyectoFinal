@@ -26,45 +26,41 @@
 
 	<div class="container" id="contenedor">
 			<div align="center">
-		<h1>Alta Empleados</h1>
-		<h2>FORMULARIO DE ALTA NUEVO EMPLEADO (add / "edit todavia no esta")</h2>
-		<form method="post" th:action="@{/guardarEmpleado}" th:object="${empleado}">
+		<h1>Alta Proyectos</h1>
+		<h2>FORMULARIO DE ALTA NUEVO PROYECTO (add / "edit todavia no esta")</h2>
+		<form method="post" th:action="@{/guardarProyecto}" th:object="${proyecto}">
 			<input id="id" th:field="*{id}" hidden />
 			<table class="table table-striped">
 	<tr>
-					<td><label for="nombre">Nombre:</label></td>
-					<td><input type="text" th:field="*{nombre}" /></td>
+					<td><label for="proyecto">Proyecto:</label></td>
+					<td><input type="text" th:field="*{proyecto}" /></td>
 				</tr>
 				<tr>
-					<td><label for="apellidos">Apellidos:</label></td>
-					<td><input type="text" th:field="*{apellidos}" /></td>
+					<td><label for="fechafin">Fecha Fin:</label></td>
+					<td><input type="text" th:field="*{fechafin}" /></td>
 				</tr>
 				<tr>
 					<td><label for="resumen">Resumen:</label></td>
 					<td><input type="text" th:field="*{resumen}" /></td>
 				</tr>
 				<tr>
-					<td><label for="foto">Foto:</label></td>
-					<td><input type="text" th:field="*{foto}" /></td>
+					<td><label for="descripcion">Descripción:</label></td>
+					<td><input type="text" th:field="*{descripcion}" /></td>
 				</tr>
 				<tr>
-					<!--<td><label for="cargo">Cargo:</label></td>
-                    <td><input type="text" th:field="*{cargo}" /></td>-->
-
-					<<td><label for="nombre">Cargo:</label></td>
-
-					
-
+					<td><label for="imagen">Imagen:</label></td>
+					<td><input type="text" th:field="*{imagen}" /></td>
+				</tr>
+				<tr>
+					<td><label for="cliente">Cliente:</label></td>
 					<td>
-						<select name="cargo">
-							<!-- <option value=""> Seleccione </option> -->
-							<option th:each="cargo:${cargos}" th:value="${cargo.id}" th:text="${cargo.cargo}">
-								
+						<select name="otro">
+							<option th:each="cliente:${clientes}" th:object="${cliente}" th:text="${cliente.nombre}">	
 							</option>
 						</select>
 				</tr>
 			</table>
-			<input type="submit" value="Guardar empleado">
+			<input type="submit" value="Guardar proyecto">
 
 			
 		</form>

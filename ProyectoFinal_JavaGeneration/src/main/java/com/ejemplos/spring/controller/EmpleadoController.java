@@ -65,10 +65,9 @@ public class EmpleadoController {
 		m.addAttribute("equipoList", service.listarEquipo());
 		log.info("------" + service.listarEquipo());
 		//este metodo invoca la url de /random/persons y devuelve la listaEmplFalso [eF1, eF2, etc]
-				List<EmpleadoFalso> listaEmplFalsos = new ArrayList<>();
-				listaEmplFalsos.addAll(serv.leerEmplFalsosCollection());
-				m.addAttribute("listaEmpFalsos", listaEmplFalsos);
-				
+		List<EmpleadoFalso> listaEmplFalsos = new ArrayList<>();
+		listaEmplFalsos.addAll(serv.leerEmplFalsosCollection());
+		m.addAttribute("listaEmpFalsos", listaEmplFalsos);
 			
 		return "equipo";
 	}

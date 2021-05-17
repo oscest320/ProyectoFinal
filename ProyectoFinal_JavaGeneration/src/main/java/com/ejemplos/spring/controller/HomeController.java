@@ -13,4 +13,8 @@ public class HomeController {
 		return "home";
 	}
 	
+	/*@GetMapping("/proyectos/movieflix"){
+		
+	}*/
+	
 }

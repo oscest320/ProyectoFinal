@@ -52,13 +52,13 @@
 					<td><input type="text" th:field="*{imagen}" /></td>
 				</tr>
 				<tr>
-					<td><label for="cliente">Cliente:</label></td>
-					<td>
-						<select name="otro">
-							<option th:each="cliente:${clientes}" th:object="${cliente}" th:text="${cliente.nombre}">	
+						<td><label for="cliente">Cliente:</label>
+						<td><select name="cliente">
+							<option th:each="cliente:${clientes}" th:value="${cliente}" th:text="${cliente.nombre}">
+								
 							</option>
-						</select>
-				</tr>
+						</select></td>
+					</tr>
 			</table>
 			<input type="submit" value="Guardar proyecto">
 

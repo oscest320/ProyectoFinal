@@ -23,7 +23,7 @@ public class Proyecto {
 	
 	
 	@ManyToOne
-	@JoinColumn(name = "idcliente")
+	@JoinColumn(name = "empresa")
     private Cliente cliente;
 	
 	public Proyecto() {

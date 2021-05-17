@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -104,9 +105,15 @@ public class ProyectoController {
 //Metodo para guardar un nuevo proyecto
 	
 	@PostMapping("/guardarProyecto")
-	public ModelAndView guardarProyecto(Proyecto proyecto, Cliente cliente) {
-		log.info("----- Entrando en guardaProyecto");	
-		proyecto.setCliente(new Cliente());
+	public ModelAndView guardarProyecto(Proyecto proyecto, BindingResult br, String cliente) {
+		log.info("----- Entrando en guardaProyecto");
+		List<Cliente> clientes = new ArrayList<>();
+		clientes.addAll(clienteService.leerClientesCollection());
+		for (Cliente objetoCliente : clientes) {
+			if(objetoCliente.toString().equals(cliente)) {
+				proyecto.setCliente(objetoCliente);
+			}
+		}
 		service.enviarProyectos(proyecto);
 		return new ModelAndView("redirect:/admin/proyectos");
 	}

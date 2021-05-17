@@ -18,6 +18,8 @@ public class ClientProyectoService {
 			List<Proyecto> listaProyectos = Arrays.asList(proyecto);
 			return listaProyectos;
 		}
+		
+		//este metodo coge un proyecto (el que se pasa por parametro) y lo envia a esta url
 		public void enviarProyectos(Proyecto proyecto){
 			RestTemplate plantilla = new RestTemplate();
 			plantilla.postForObject("http://localhost:5000/proyectos", proyecto, Proyecto.class);

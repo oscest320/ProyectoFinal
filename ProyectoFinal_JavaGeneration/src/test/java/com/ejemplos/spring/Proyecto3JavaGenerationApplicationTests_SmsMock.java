@@ -16,16 +16,17 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.ejemplos.spring.controller.EmpleadoController;
+import com.ejemplos.spring.controller.HomeController;
 
 
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(EmpleadoController.class) //le estoy inyectado el objeto
+@WebMvcTest(HomeController.class) //le estoy inyectado el objeto
 
 public class Proyecto3JavaGenerationApplicationTests_SmsMock {
 
 	
-	//este test comprueba le peticion get, que este bien hecha y que ademas me devuelva un objeto de tipo string que dice  "hola mundo"
+	//este test comprueba le peticion get, que este bien hecha y que ademas me devuelva un objeto de tipo string que dice "Descubre lo que podemos hacer por ti"
 	
 	@Autowired
 	private MockMvc mockMvc; // un objeto mock es una prueba de algo muy "a medida"
@@ -33,10 +34,10 @@ public class Proyecto3JavaGenerationApplicationTests_SmsMock {
 	
 	@Test
 	void contextLoads() throws Exception {
-		mockMvc.perform(get("/equipo"))
+		mockMvc.perform(get("/"))
 			   .andDo(print())
 			   .andExpect(status().isOk())
-			   .andExpect(content().string(containsString("usoa")));
+			   .andExpect(content().string(containsString("Descubre lo que podemos hacer por ti")));
 	}
 	
 

@@ -11,7 +11,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -20,8 +22,9 @@ import com.ejemplos.spring.controller.ProyectoRestController;
 
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(ProyectoRestController.class) //le estoy inyectado el objeto
-
+//@WebMvcTest(ProyectoRestController.class) //le estoy inyectado el objeto
+@SpringBootTest()
+@AutoConfigureMockMvc
 public class ProyectoFinalJavaGenerationApplicationTests_SmsMock_Rest {
 
 	

@@ -3,6 +3,7 @@
 }
 
 body {
+	
 
 	margin: 0px;
 	background-position: center top;
@@ -10,23 +11,9 @@ body {
 	background-repeat: no-repeat;
     background-size: cover;
 	font-family: 'Montserrat', sans-serif;
-}
-
-
-header {
-	width: 100%;
-	background-color: rgba(0,0,0,0.77);
-	height: auto;
-	padding-top: 10px;
-	padding-bottom: 1px;;
-	
-}
-
-main{
-
-	padding-top: 1%;
 
 }
+
 
 
 h1{
@@ -48,19 +35,11 @@ h4{
 
 p{
 	color: black;
-	font-weight: bold;
-
+	
 	text-align: justify;
 }
 
-ul{
-	color: black;
-	font-weight: bold;
-}
 
-li{
-	margin:2%;
-}
 
 img{
 	display: block;
@@ -69,18 +48,43 @@ img{
 	
 }
 
-
-
-#real{
-	text-align: center;
-}
-
-#real h5{
+#cabecera{
+	
+	background-image: url(../img/fondo6.jpg);
+	height: auto;
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	color: rgb(224, 157, 12);
 	font-style: italic;
+	text-align: center;
+	padding: 10%;
+	
 }
 
-#real p{
+
+#cabecera h2{
+	margin-top: 6%;
+}
+
+#cabecera-proyecto{
+	background-image: url(../img/pc3.jpg);
+	height: auto;
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	color: rgb(224, 157, 12);
+	font-style: italic;
 	text-align: center;
+	padding: 20%;
+}
+
+#cabecera-equipo{
+	padding-top: 8%;
 }
 #equipo h2{
 	font-weight: bold;
@@ -90,34 +94,6 @@ img{
 	border-top: 2px dashed rgb(224, 157, 12);
 }
 
-#equipo img{
-	width: 50%;
-	display:block;
-margin:auto;
-text-align: center;
-}
-#equipo h3{
-	margin-top: 3%;
-	font-weight: bold;
-}
-
-#equipo h2{
-	font-weight: bold;
-	text-align:center;
-	padding-top: 3%;
-	padding-bottom: 1%;
-
-}
-
-#falso{
-text-align: center;
-}
-
-#falso p{
-text-align: center;
-
-
-}
 .btn-primary {
   color: #fff;
   background-color:rgb(224, 157, 12);
@@ -129,6 +105,8 @@ text-align: center;
 	transition: all 0.3s ease;
 }
 
+
+
 .btn-primary:hover {
   color: black;
   background-color: #fff;
@@ -136,42 +114,103 @@ text-align: center;
   border: 1px solid rgb(224, 157, 12);
 }
 
-#disabledTextInput{
-	background-color: rgba(158, 143, 143, 0.357);
-	border-radius: 25px;
-	color: black;
-	margin-top: 2%;
-}
-
-#formulario{
-	padding-left: 10%;
-}
-#formulario a{
-	font-style: italic;
-	color: honeydew;
-	font-weight: bold;
-	color: rgb(0, 0, 0);;
-}
 
 
-.logo{
+
+
+
+.logo-jg{
 	width: 20vh;
 	height:7.5vh;
 	margin-bottom: 1%;
 }
 
+#scrum{
+	
+		background-image: url(../img/scrum.jpg);
+		margin: 0px;
+		height: 200px;
+		background-position: center top;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		font-family: 'Montserrat', sans-serif;
+}
+
+
+  .box{
+	  border: 2px dashed  rgb(224, 157, 12);
+	margin-top: 5%;
+	margin-bottom: 1%;
+	padding: 5%;
+
+  }
+
+  .box i{
+	margin-top: 5%;
+  }
+  
+  .name-descripeion{
+	  font-weight: bold;
+  }
+
+  .responsive {
+	width: 100%;
+	height: auto;
+  }
+  .card{
+	
+	border: 2px dashed  rgb(224, 157, 12);
+	padding: 5%;
+
+  margin-top: 5%;
+  margin-bottom: 5%;
+  }
+.card-title{
+	padding-right: 9%;
+}
+
+#filosofia{
+	
+	background-image: url(../img/filosofia.jpg);
+	margin: 0px;
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	padding-top: 10%;
+}
+#proyectos{
+	text-align: center;	
+	height: auto;
+	
+}
+
+
+#proyectos h2{
+	font-weight: bold;
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 1%;	
+}
+
+#proyectos h3{
+	margin-bottom: -1%;
+}
+
+#proyectos h5{
+	margin-top: 3%;
+	margin-bottom: 3%;
+	font-weight: bold;
+	padding-bottom: 3%;
+	border-bottom: 2px dashed rgb(224, 157, 12);
+}
 
 
 
 #metodos{
 	text-align: center;	
-	height: auto;
-  padding-bottom: 2%;
-  }
-	
-
-#fondo-metodos{
-	
 	height: auto;
 	
 }
@@ -181,17 +220,11 @@ text-align: center;
 	font-weight: bold;
 	text-align: center;
 	padding-top: 3%;
-
 	padding-bottom: 1%;	
 }
 
 #metodos h3{
 	margin-bottom: -1%;
-
-	padding-bottom: 1%;
-	
-	
-
 }
 
 #metodos h5{
@@ -201,17 +234,57 @@ text-align: center;
 #metodos i{
 	color:rgb(224, 157, 12);
 	font-size: 2.5em;
-
 	margin-bottom: 5%;
 
 }
 
 #metodos p{
 	text-align: center;
-	margin-bottom: 3%;
 
+	margin-bottom: 10%;
 }
 
+img{
+	display: block;
+	height: auto;
+    width: 100%;
+	
+}
+
+
+#real{
+	text-align: center;
+}
+
+#real h3{
+	padding-top: 3%;
+}
+
+#real h5{
+	font-style: italic;
+	font-weight: bold;
+}
+
+#real p{
+	text-align: center;
+}
+
+#falso{
+	text-align: center;
+}
+
+#falso h3{
+	padding-top: 3%;
+}
+
+#falso h5{
+	font-style: italic;
+	font-weight: bold;
+}
+
+#falso p{
+	text-align: center;
+}
 
 #fondo-empresas{
 	background-color: rgba(230, 221, 221, 0.815);
@@ -236,7 +309,71 @@ text-align: center;
 	
 }
 
+#caja-proyectos h3{
+	padding-top: 3%;
+}
 
+.accordion i {
+	cursor: pointer;
+	transition:color 0,5s ease;
+	padding-top: 3%;
+	font-size:x-large;
+	color:rgb(224, 157, 12);
+}
+
+
+
+
+.proyecto-bloque{
+
+
+	margin: 0px;
+	height: 350px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	padding-top: 15%;
+	transition: all 0.5s ease-in;
+}
+
+
+.proyecto-bloque h3{
+	text-align: center;
+	line-height: 175px;;
+	color: transparent;
+	font-weight: bold;
+	color: rgb(224, 157, 12);
+	transition: all 0.5s ease-in;
+}
+
+.proyecto-bloque h3:hover{
+	color: transparent;
+	
+}
+
+#movieflix{
+	background-image: url(../img/movieflixhover.jpg);
+	transition: all 0.5s ease-in;
+}
+
+
+#movieflix:hover{
+	background-image: url(../img/movieflix.jpg);
+	border:2px dashed rgb(224, 157, 12);
+	
+	
+}
+
+#landing{
+	background-image: url(../img/landinghover.jpg);
+	transition: all 0.5s ease-in;
+}
+
+
+#landing:hover{
+	background-image: url(../img/landing.jpg);
+	border:2px dashed rgb(224, 157, 12);
+}
 
 
 
@@ -257,6 +394,7 @@ footer i {
     margin: 2%;
 	transition: all 0.3s ease;
 	padding: 4%;
+	
 }
 
 footer i:hover {
@@ -273,4 +411,97 @@ footer a{
 	font-style: italic;
 	color: gray;
 	margin-top: 10%;
+}
+
+.fa-phone{
+transform: rotatey(180deg);
+}
+
+
+
+
+#hard a:hover {
+	text-decoration: none!important;
+  }
+  #hard  .dedcription-btn {
+	width: 40%;
+	position: relative;
+	display: inline-block;
+	border-radius: 30px;
+	background-color: #fcfcfc;
+	color: #000000;
+	border-radius: 25%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	text-decoration: black;
+	padding: 9px 0;
+	transition: all 0.3s;
+	padding-right: 40px;
+	margin: 20px 5px;
+	
+  }
+  #hard  .dedcription-btn .btn-icon {
+	background-color: #ffa000;
+	width: 92px;
+	height: 45px;
+	float: right;
+	position: absolute;
+	
+	right: 0px;
+	top: 0px;
+	transition: all 2s;
+  }
+  #hard .name-descripeion {
+	position: relative;
+	z-index: 9999;
+  }
+  #hard .btn-icon::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 45px solid #fcfcfc;
+	border-right: 40px solid transparent;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+  }
+  #hard .dedcription-btn:hover .btn-icon {
+	width: 100%;
+	
+  }
+  #hard .dedcription-btn:hover .btn-icon::after {
+	display: none;
+	opacity: 0.1;
+  }
+  #hard .btn-icon i {
+	  font-size:medium;
+	position: absolute;
+	right: 25px;
+	top: 15px;
+	color: rgb(255, 255, 255);
+  }
+  #hard .dedcription-btn:hover {
+	color: #fff!important;
+  }
+ 
+  #hard .hover-box {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+  }
+
+
+
+
+  @media (max-width: 600px) {
+	#cabecera h2{
+		margin-top: 20%;
+	}
+
+	#cabecera-equipo{
+		padding-top: 20%;
+	}
 }

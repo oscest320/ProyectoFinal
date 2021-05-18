@@ -2,6 +2,7 @@ package com.ejemplos.spring;
 
 
 import static org.hamcrest.CoreMatchers.containsString;
+import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -49,7 +50,7 @@ public class ProyectoFinalJavaGenerationRestTemplateApplicationTests {
 		proyectoMockito.setCliente(new Cliente());
 		
 		//when(serv.altaProyecto(proyectoMockito));
-		//verify(proyectoMockito).altaProyecto();
+		//doAnswer(proyectoMockito).when(serv.altaProyecto(proyectoMockito));
 	
 		mockMvc.perform(post("/proyectos"))
 			   .andDo(print())

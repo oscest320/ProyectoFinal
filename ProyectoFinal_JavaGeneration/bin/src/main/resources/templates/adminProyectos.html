@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    
+    
+    
+	
+
+	<title>BackOffice</title>
+</head>
+<body>
+
+<nav id="backoffice" class="navbar navbar-expand-lg  bg-dark static-top">
+            <div class="container">
+            
+            <h2 span style="color:rgb(255, 255, 255)">BackOffice</h2>
+        </nav>
+
+
+
+	<div class="container" id="contenedor">
+		<div align="center">
+			
+			<h1>Listado de proyectos</h1>
+			<p>Estos son los datos de la tabla de proyectos</p>
+			<table class="table table-responsive table-striped">
+
+
+
+				<thead>
+					<tr>
+						<th> id </th>
+						<th> Proyecto </th>
+						<th> Fecha fin </th>
+						<th> Resumen </th>
+						<th> Descripción </th>
+						<th> Imagen </th>
+						<th> Cliente </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="proyecto : ${proyectos}">
+						<td th:text="${proyecto.id}" />
+						<td th:text="${proyecto.proyecto}" />
+						<td th:text="${proyecto.fechafin}" />
+						<td th:text="${proyecto.resumen}" />
+						<td th:text="${proyecto.descripcion}" />
+						<td th:text="${proyecto.imagen}" />
+						<td th:text="${proyecto.cliente.getNombre()}" />
+					</tr>
+				</tbody>
+			</table>
+			
+
+				
+				<button type="button" class="btn btn-outline-primary"><a href="/admin/proyectos/alta">Alta proyecto</a></button>
+
+		
+			
+		</div>
+	</div>
+</body>
+</html>

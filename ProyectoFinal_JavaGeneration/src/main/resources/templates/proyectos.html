@@ -90,26 +90,16 @@
 
 
 
-                  <!-- <div id="caja-proyectos" class="col-sm-12 col-md-6 col-lg-6">
-                        <img src="/img/pc2.jpg" id="caca" class="img-fluid"  alt="Responsive image">
-                        <h3>Nombre</h3>
-                        <div class="accordion">
-                            <i class="fas fa-plus-circle"></i> </div>
-                        <div class="caja-acorddion ">
-                            <h5>Diseñador </h5>
-                            <p>Organizamos sesiones conjuntas de equipo y planteamos métodos de design thinking para
-                                extraer y ordenar las mejores ideas</p>
-                        </div>
-
-                    </div>--> 
+    
 
                     <div id="caja-proyectos" class="col-sm-12 col-md-6 col-lg-6" th:each="proyecto: ${proyectos}">
-                        <div id="movieflix" class="proyecto-bloque">
-                            <h3>MOVIEFLIX</h3>
+                        <div th:id="${proyecto.imagen}" class="proyecto-bloque">
+                            <h3 th:text="${proyecto.proyecto}"></h3>
                         </div>
                         <div class="accordion">
+                        
                             <i class="fas fa-plus-circle"></i> </div>
-                        <div class="caja-acorddion ">
+                        <div class="caja-acorddion">
                             <h3 th:text="${proyecto.proyecto}"></h3>
                              <h5 th:text="${proyecto.cliente.getNombre}"></h5>
                             <h5 th:text="${proyecto.fechafin}"></h5>
@@ -235,22 +225,17 @@
 
         </footer>
 
-        <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
+        
+        
+      <script>
+$('.fa-plus-circle').on('click', function () {
+$(".caja-acorddion").toggle();
 
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function () {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block") {
-                        panel.style.display = "none";
-                    } else {
-                        panel.style.display = "block";
-                    }
-                });
-            }
-        </script>
+});
+	
+</script>
+    
+ 
 
 
 

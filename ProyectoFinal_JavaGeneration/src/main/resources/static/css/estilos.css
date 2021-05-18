@@ -309,8 +309,13 @@ img{
 	
 }
 
+#caja-proyectos{
+	margin-bottom: 5%;
+}
 #caja-proyectos h3{
 	padding-top: 3%;
+	
+	
 }
 
 .accordion i {
@@ -321,7 +326,15 @@ img{
 	color:rgb(224, 157, 12);
 }
 
+.caja-acorddion{
+	display:none;
 
+	
+}
+
+.fa-plus-circle{
+	color:pink;
+}
 
 
 .proyecto-bloque{
@@ -354,12 +367,14 @@ img{
 #movieflix{
 	background-image: url(../img/movieflixhover.jpg);
 	transition: all 0.5s ease-in;
+	border:2px dashed rgb(224, 157, 12);
 }
 
 
 #movieflix:hover{
 	background-image: url(../img/movieflix.jpg);
-	border:2px dashed rgb(224, 157, 12);
+	border: none;
+	
 	
 	
 }
@@ -367,16 +382,98 @@ img{
 #landing{
 	background-image: url(../img/landinghover.jpg);
 	transition: all 0.5s ease-in;
+	border:2px dashed rgb(224, 157, 12);
 }
 
 
 #landing:hover{
 	background-image: url(../img/landing.jpg);
 	border:2px dashed rgb(224, 157, 12);
+	border: none;
 }
 
+#web{
+	background-image: url(../img/weebhover.jpg);
+	transition: all 0.5s ease-in;
+	border:2px dashed rgb(224, 157, 12);
+}
+#web:hover{
+	background-image: url(../img/weeb.jpg);
+	border:2px dashed rgb(224, 157, 12);
+	border: none;
+}
 
+#fiber{
+	background-image: url(../img/fiberhover.jpg);
+	transition: all 0.5s ease-in;
+	border:2px dashed rgb(224, 157, 12);
+}
 
+#fiber:hover{
+	background-image: url(../img/fiber.jpg);
+	border:2px dashed rgb(224, 157, 12);
+	border: none;
+}
+
+#corte{
+	background-image: url(../img/corte2hover.png);
+	transition: all 0.5s ease-in;
+	border:2px dashed rgb(224, 157, 12);
+}
+
+#corte:hover{
+	background-image: url(../img/corte2.png);
+	border:2px dashed rgb(224, 157, 12);
+	border: none;
+}
+
+#neutrales{
+	background-image: url(../img/neutraleshover.jpg);
+	transition: all 0.5s ease-in;
+	border:2px dashed rgb(224, 157, 12);
+}
+
+#neutrales:hover{
+	background-image: url(../img/neutrales.jpg);
+	border:2px dashed rgb(224, 157, 12);
+	border: none;
+}
+
+#pwc{
+	background-image: url(../img/pwchover.jpg);
+	transition: all 0.5s ease-in;
+	border:2px dashed rgb(224, 157, 12);
+}
+
+#pwc:hover{
+	background-image: url(../img/pwc.jpg);
+	border:2px dashed rgb(224, 157, 12);
+	border: none;
+}
+
+#telecinco{
+	background-image: url(../img/telecincohover.jpg);
+	transition: all 0.5s ease-in;
+	border:2px dashed rgb(224, 157, 12);
+}
+
+#telecinco:hover{
+	background-image: url(../img/telecinco.jpg);
+	border:2px dashed rgb(224, 157, 12);
+	border: none;
+}
+
+#porcelanosa{
+	background-image: url(../img/porcelanosahover.jpg);
+	transition: all 0.5s ease-in;
+	border:2px dashed rgb(224, 157, 12);
+}
+
+#porcelanosa:hover{
+	background-image: url(../img/porcelanosa.jpg);
+	border:2px dashed rgb(224, 157, 12);
+	border: none;
+}
 footer {
 	height: auto;
 	width: 100%;
@@ -495,7 +592,6 @@ transform: rotatey(180deg);
 
 
 
-
   @media (max-width: 600px) {
 	#cabecera h2{
 		margin-top: 20%;
@@ -504,4 +600,45 @@ transform: rotatey(180deg);
 	#cabecera-equipo{
 		padding-top: 20%;
 	}
+}
+
+
+#bloque-movieflix h2{
+	font-weight: bold;
+	font-style: italic;
+}
+#cabecera-movieflix{
+	background-image: url(../img/movieflixdesktop.jpg);
+	height: auto;
+	background-position: center top;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	color: rgb(224, 157, 12);
+	
+	text-align: center;
+	padding: 25%;
+	margin-top: -10%;
+	margin-bottom: -8%;
+}
+
+#bloque-movieflix{
+	text-align: center;
+}
+
+#bloque-movieflix h3{
+	margin-top: 12%;
+	font-weight: bold;
+}
+	
+
+#bloque-movieflix h4{
+	margin-top: 12%;
+	font-weight: bold;
+}
+
+.texto-movieflix{
+	margin-left: -7%;
+	margin-right: 10%;
 }

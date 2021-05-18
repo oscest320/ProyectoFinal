@@ -2,6 +2,9 @@ package com.ejemplos.spring;
 
 
 import static org.hamcrest.CoreMatchers.containsString;
+import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.doCallRealMethod;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -10,6 +13,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -43,18 +49,22 @@ public class ProyectoFinalJavaGenerationRestTemplateApplicationTests {
 	@Test
 	void contextLoads() throws Exception {
 		
+		List<Proyecto> listMockito = new ArrayList<>();
 		Proyecto proyectoMockito = new Proyecto();
 		proyectoMockito.setProyecto("Proyecto Mockito");
 		proyectoMockito.setFechafin("17-05-2021");
 		proyectoMockito.setCliente(new Cliente());
+		listMockito.add(proyectoMockito);
 		
-		//when(serv.altaProyecto(proyectoMockito));
-		//verify(proyectoMockito).altaProyecto();
+		when(serv.listarProyectos()).thenReturn(listMockito);
 	
-		mockMvc.perform(post("/proyectos"))
+		mockMvc.perform(get("/proyectos"))
 			   .andDo(print())
 			   .andExpect(status().isOk())
 			   .andExpect(content().string(containsString("Proyecto Mockito")));
+		
+		
+		
 	}
 	
 

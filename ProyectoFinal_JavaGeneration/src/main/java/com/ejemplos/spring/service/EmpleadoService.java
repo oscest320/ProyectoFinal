@@ -15,4 +15,10 @@ public interface EmpleadoService {
 	
 	//Metodo para guardar un nuevo empleado
 	public void guardarEmpleado(Empleado empleado);
+	
+	//Metodo para editar un empleado
+	public Empleado editarEmpleado(int id);
+	
+	//Metodo para eliminar un empleado por id
+	public void eliminarEmpleado(int id);
 }

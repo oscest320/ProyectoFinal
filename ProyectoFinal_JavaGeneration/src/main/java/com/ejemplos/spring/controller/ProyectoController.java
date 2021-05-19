@@ -119,24 +119,29 @@ public class ProyectoController {
 		return new ModelAndView("redirect:/admin/proyectos");
 	}
 	
-	/*
+	
 	//Metodo para editar un proyecto
-	@GetMapping("/editar")
+	@GetMapping("/admin/proyectos/editar")
 	public String editarProyecto(@RequestParam("id") int id, Model m) {
 			log.info("----- Entrando en editarProyecto");
-			m.addAttribute("proyecto", service.editarProyecto(id));
-			m.addAttribute("clientes", clienteService.leerClientesCollection());
+			//service.proyectoPorId(id);
+			//System.out.println(service.proyectoPorId(id));
+			m.addAttribute("proyecto", service.proyectoPorId(id));
+			List<Cliente> clientes = new ArrayList<>();
+			clientes.addAll(clienteService.leerClientesCollection());
+			m.addAttribute("clientes", clientes);
 			return "adminProyectosAlta";
-		}
-		
-	//Metodo para eliminar un empleado
-	@GetMapping("/eliminar")
-	public ModelAndView eliminarProyectos(@RequestParam("id")int id) {
+	}
+	
+	
+	//Metodo para eliminar un proyecto
+	@GetMapping("/admin/proyectos/eliminar")
+	public ModelAndView eliminarProyecto(@RequestParam("id") int id) {
 		log.info("----- Entrando en eliminarProyecto");
 		service.eliminarProyecto(id);
-			return new ModelAndView("redirect:/proyectos");
+		return new ModelAndView("redirect:/proyectos");
 	}
-	*/
+	
 }
 		
 	

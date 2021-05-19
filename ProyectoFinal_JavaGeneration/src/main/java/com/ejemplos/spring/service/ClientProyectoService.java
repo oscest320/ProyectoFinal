@@ -14,10 +14,7 @@ import com.ejemplos.spring.repository.EmpleadoRepository;
 
 
 @Service
-public class ClientProyectoService /*implements ClientProyectoServiceInterfaz*/ {
-	
-	/*@Autowired
-	ProyectoRepository proyectoRepo;*/
+public class ClientProyectoService {
 	
 		//este metodo invoca la url de /proyectos y devuelve la listaProyectos
 		public Collection<Proyecto> leerProyectosCollection() {
@@ -33,19 +30,24 @@ public class ClientProyectoService /*implements ClientProyectoServiceInterfaz*/ 
 			plantilla.postForObject("http://localhost:5000/proyectos", proyecto, Proyecto.class);
 		}
 		
-		/*
-		//Metodo para editar un proyecto
-		@Override
-		public Proyecto editarProyecto(int id) {
-			return proyectoRepo.getOne(id);
+		//este metodo recoge el proyecto que se quiere editar 
+		public void editarProyecto(Proyecto proyecto) {
+			RestTemplate plantilla = new RestTemplate();
+			plantilla.put("http://localhost:5000/admin/proyectos/editar" + proyecto.getProyecto(), proyecto, Proyecto.class);
 		}
-
-		@Override
+		
+		
+		public Proyecto proyectoPorId(int id) {
+			RestTemplate plantilla = new RestTemplate();
+			Proyecto proyecto =plantilla.getForObject("http://localhost:5000/proyectos/" + id, Proyecto.class);
+			return proyecto;
+		}
+				
+		//este metodo recoge el proyecto que se quiere eliminar 
 		public void eliminarProyecto(int id) {
-			proyectoRepo.deleteById(id);
-		}*/
-		
-		
+			RestTemplate plantilla = new RestTemplate();
+			plantilla.delete("http://localhost:5000/proyectos/" + id, Proyecto.class);
+		}
 
 
 }

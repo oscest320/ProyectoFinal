@@ -18,6 +18,12 @@ public class HomeController {
 		return "movieflix";
 	}
 	
+	@GetMapping("/proyectos/landing")
+	public String viewLanding() {
+		return "landing";
+	}
+	
+	
 	
 		
 	

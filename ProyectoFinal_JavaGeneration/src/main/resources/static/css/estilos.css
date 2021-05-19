@@ -19,7 +19,7 @@ body {
 h1{
 	color: black;
 	margin-bottom: 5%;
-
+	margin-top: 5%;
 	text-align: center;
 	
 }
@@ -94,7 +94,7 @@ img{
 	border-top: 2px dashed rgb(224, 157, 12);
 }
 
-.btn-primary {
+.btn-success {
   color: #fff;
   background-color:rgb(224, 157, 12);
   width: 15vh;
@@ -103,6 +103,7 @@ img{
   margin-top: 2%;
 	border: 1px solid #FFFFFF;
 	transition: all 0.3s ease;
+  margin-bottom: 5%;
 }
 
 
@@ -641,4 +642,16 @@ transform: rotatey(180deg);
 .texto-movieflix{
 	margin-left: -7%;
 	margin-right: 10%;
+}
+
+th {
+	text-align: center;
+}
+
+btn-outline-secondary {
+	color: #fff;
+}
+
+btn-outline-danger {
+	color: #fff;
 }

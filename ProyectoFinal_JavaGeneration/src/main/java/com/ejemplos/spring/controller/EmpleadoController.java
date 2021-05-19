@@ -1,6 +1,7 @@
 package com.ejemplos.spring.controller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ejemplos.spring.model.Cargo;
 import com.ejemplos.spring.model.Empleado;
 import com.ejemplos.spring.model.EmpleadoFalso;
 import com.ejemplos.spring.service.CargoService;
@@ -94,8 +96,19 @@ public class EmpleadoController {
 	@GetMapping("/editar")
 	public String editarEmpleado(@RequestParam("id") int id, Model m) {
 		log.info("----- Entrando en editarEmpleado");
+		Empleado empleadoSeleccionado = service.editarEmpleado(id);
 		m.addAttribute("empleado", service.editarEmpleado(id));
-		m.addAttribute("cargos", cargos.listarCargos());
+		List<Cargo> listaCargos = new ArrayList<>();
+		List<Cargo> listaCargosOrdenados = new ArrayList<>();
+		listaCargos = cargos.listarCargos();
+		for (Cargo cargo : listaCargos) {
+			if (empleadoSeleccionado.getCargo().equals(cargo)) {
+				listaCargosOrdenados.add(0, cargo);
+			} else {
+				listaCargosOrdenados.add(cargo);
+			}
+		}
+		m.addAttribute("cargos", listaCargosOrdenados);
 		return "adminEquipoAlta";
 	}
 	

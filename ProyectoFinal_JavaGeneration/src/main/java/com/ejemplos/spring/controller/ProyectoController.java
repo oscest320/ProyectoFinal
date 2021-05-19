@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ejemplos.spring.model.Cargo;
 import com.ejemplos.spring.model.Cliente;
 import com.ejemplos.spring.model.Proyecto;
 import com.ejemplos.spring.service.ClientClienteService;
@@ -70,7 +71,6 @@ public class ProyectoController {
 	/*
 	 * Metodo para mostrar un listado de los proyectos de la empresa al Usuario
 	 */
-	
 	@GetMapping("/proyectos")
 	public String listarProyectos(Model m) {
 		log.info("----- Entrando en listarProyectos");
@@ -124,12 +124,19 @@ public class ProyectoController {
 	@GetMapping("/admin/proyectos/editar")
 	public String editarProyecto(@RequestParam("id") int id, Model m) {
 			log.info("----- Entrando en editarProyecto");
-			//service.proyectoPorId(id);
-			//System.out.println(service.proyectoPorId(id));
-			m.addAttribute("proyecto", service.proyectoPorId(id));
-			List<Cliente> clientes = new ArrayList<>();
-			clientes.addAll(clienteService.leerClientesCollection());
-			m.addAttribute("clientes", clientes);
+			Proyecto proyectoSeleccionado = service.proyectoPorId(id);
+			m.addAttribute("proyecto", proyectoSeleccionado);
+			List<Cliente> listaClientes = new ArrayList<>();
+			List<Cliente> listaClientesOrdenados = new ArrayList<>();
+			listaClientes = clienteService.leerClientesCollection();
+			for (Cliente cliente : listaClientes) {
+				if (cliente.equals(proyectoSeleccionado.getCliente())) {
+					listaClientesOrdenados.add(0, cliente);
+				} else {
+					listaClientesOrdenados.add(cliente);
+				}
+			}
+			m.addAttribute("clientes", listaClientesOrdenados);
 			return "adminProyectosAlta";
 	}
 	
@@ -139,7 +146,7 @@ public class ProyectoController {
 	public ModelAndView eliminarProyecto(@RequestParam("id") int id) {
 		log.info("----- Entrando en eliminarProyecto");
 		service.eliminarProyecto(id);
-		return new ModelAndView("redirect:/proyectos");
+		return new ModelAndView("redirect:/admin/proyectos");
 	}
 	
 }

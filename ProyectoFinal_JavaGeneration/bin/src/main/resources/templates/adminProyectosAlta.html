@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  
+  
+	<title>BackOffice</title>
+</head>
+<body>
+<nav id="backoffice" class="navbar navbar-expand-lg  bg-dark static-top">
+            <div class="container">
+            
+            <h2 span style="color:rgb(255, 255, 255)">BackOffice</h2>
+        </nav>
+
+
+	<div class="container" id="contenedor">
+			<div align="center">
+		<h1>Alta Proyectos</h1>
+		<h2>FORMULARIO DE ALTA NUEVO PROYECTO (add / "edit todavia no esta")</h2>
+		<form method="post" th:action="@{/guardarProyecto}" th:object="${proyecto}">
+			<input id="id" th:field="*{id}" hidden />
+			<table class="table table-striped">
+	<tr>
+					<td><label for="proyecto">Proyecto:</label></td>
+					<td><input type="text" th:field="*{proyecto}" /></td>
+				</tr>
+				<tr>
+					<td><label for="fechafin">Fecha Fin:</label></td>
+					<td><input type="text" th:field="*{fechafin}" /></td>
+				</tr>
+				<tr>
+					<td><label for="resumen">Resumen:</label></td>
+					<td><input type="text" th:field="*{resumen}" /></td>
+				</tr>
+				<tr>
+					<td><label for="descripcion">Descripción:</label></td>
+					<td><input type="text" th:field="*{descripcion}" /></td>
+				</tr>
+				<tr>
+					<td><label for="imagen">Imagen:</label></td>
+					<td><input type="text" th:field="*{imagen}" /></td>
+				</tr>
+				<tr>
+						<td><label for="cliente">Cliente:</label>
+						<td><select name="cliente">
+							<option th:each="cliente:${clientes}" th:value="${cliente}" th:text="${cliente.nombre}">
+								
+							</option>
+						</select></td>
+					</tr>
+			</table>
+			<input type="submit" value="Guardar proyecto">
+
+			
+		</form>
+		</div>
+	</div>
+</body>
+</html>
+
+
+	
+

@@ -796,7 +796,6 @@ transform: rotatey(180deg);
 	}
 		
 		
-	
 
 	.italic{
 	margin-top: 3%;
@@ -809,15 +808,10 @@ transform: rotatey(180deg);
 		
 	}
 
-th {
-	text-align: center;
-}
 
-btn-outline-secondary {
+
+.alta a{
 	color: #fff;
 }
 
-btn-outline-danger {
-	color: #fff;
-}
 

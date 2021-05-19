@@ -1,6 +1,7 @@
 package com.ejemplos.spring.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,29 @@ public class ProyectoServiceImpl implements ProyectoService {
 		proyectoRepo.save(proyecto);
 		
 	}
+
+	// Metodo para actualizar un proyecto desde su id
+	
+	@Override
+	public void actualizarProyecto(Proyecto proyecto) {
+		proyectoRepo.save(proyecto);
+	}
+
+	// Metodo para eliminar un proyecto desde su id
+	
+	@Override
+	public void eliminarProyecto(int id) {
+		//id= (Intenger) id;
+		proyectoRepo.deleteById(id);
+	}
+	
+	
+	@Override
+	public Proyecto proyectoPorId(int id) {
+		return proyectoRepo.getOne(id);
+	}
+	
+	
 	
 	
 	

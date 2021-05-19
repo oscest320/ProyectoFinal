@@ -10,7 +10,7 @@ import com.ejemplos.spring.model.Cliente;
 @Service
 public class ClientClienteService {
 	//este metodo invoca la url de /clientes y devuelve la listaClientes
-		public Collection<Cliente> leerClientesCollection() {
+		public List<Cliente> leerClientesCollection() {
 			RestTemplate plantilla = new RestTemplate();
 			Cliente[] cliente = plantilla.getForObject("http://localhost:5000/clientes", Cliente[].class);
 			List<Cliente> listaClientes = Arrays.asList(cliente);

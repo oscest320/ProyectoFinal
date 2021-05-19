@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.RestTemplate;
 
 import com.ejemplos.spring.model.Cliente;
@@ -31,12 +32,6 @@ public class ClientProyectoService {
 		}
 		
 		//este metodo recoge el proyecto que se quiere editar 
-		public void editarProyecto(Proyecto proyecto) {
-			RestTemplate plantilla = new RestTemplate();
-			plantilla.put("http://localhost:5000/admin/proyectos/editar" + proyecto.getProyecto(), proyecto, Proyecto.class);
-		}
-		
-		
 		public Proyecto proyectoPorId(int id) {
 			RestTemplate plantilla = new RestTemplate();
 			Proyecto proyecto =plantilla.getForObject("http://localhost:5000/proyectos/" + id, Proyecto.class);
@@ -46,8 +41,8 @@ public class ClientProyectoService {
 		//este metodo recoge el proyecto que se quiere eliminar 
 		public void eliminarProyecto(int id) {
 			RestTemplate plantilla = new RestTemplate();
-			plantilla.delete("http://localhost:5000/proyectos/" + id, Proyecto.class);
+			plantilla.delete("http://localhost:5000/proyectos/" + id);
 		}
-
-
+		
+		
 }

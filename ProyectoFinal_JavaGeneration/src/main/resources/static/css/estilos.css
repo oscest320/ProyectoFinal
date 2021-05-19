@@ -19,7 +19,7 @@ body {
 h1{
 	color: black;
 	margin-bottom: 5%;
-	margin-top: 5%;
+
 	text-align: center;
 	
 }
@@ -94,12 +94,10 @@ img{
 	border-top: 2px dashed rgb(224, 157, 12);
 }
 
-
 #equipo img{
 	width:50%;
 	margin: auto;
 }
-
 
 .btn-success {
 
@@ -113,7 +111,6 @@ img{
 	transition: all 0.3s ease;
   margin-bottom: 5%;
 }
-
 
 
 .btn-primary:hover {
@@ -181,7 +178,7 @@ img{
 
 #filosofia{
 	
-	background-image: url(../img/filosofia.jpg);
+	background-image: url(../img/filosofia4.png);
 	margin: 0px;
 	background-position: center top;
 	background-attachment: fixed;
@@ -240,6 +237,10 @@ img{
 	font-weight: bold;
 }
 
+#metodos h6{
+	padding-top: 3%;
+	text-align: justify;
+}
 #metodos i{
 	color:rgb(224, 157, 12);
 	font-size: 2.5em;
@@ -259,6 +260,7 @@ img{
     width: 100%;
 	
 }
+
 .team{
 	text-align: center;
 	padding-bottom: 2%;
@@ -309,13 +311,10 @@ img{
 	
 }
 
-#caja-proyectos{
-	margin-bottom: 5%;
-}
+
+
 #caja-proyectos h3{
 	padding-top: 3%;
-	
-	
 }
 
 .accordion i {
@@ -324,16 +323,11 @@ img{
 	padding-top: 3%;
 	font-size:x-large;
 	color:rgb(224, 157, 12);
+	padding-bottom: 3%;
 }
 
-.caja-acorddion{
+.caja-accordion{
 	display:none;
-
-	
-}
-
-.fa-plus-circle{
-	color:pink;
 }
 
 
@@ -477,6 +471,8 @@ background-image: url(../img/pwchover2.png);
 	border:2px dashed rgb(224, 157, 12);
 	border: none;
 }
+
+
 footer {
 	height: auto;
 	width: 100%;
@@ -595,6 +591,7 @@ transform: rotatey(180deg);
 
 
 
+
   @media (max-width: 600px) {
 	#cabecera h2{
 		margin-top: 20%;
@@ -605,6 +602,7 @@ transform: rotatey(180deg);
 	}
 }
 
+_________________________________________________________________
 
 #bloque-movieflix h2{
 	font-weight: bold;
@@ -646,6 +644,7 @@ transform: rotatey(180deg);
 	margin-right: 10%;
 }
 
+____________________________________________________
 
 #contacto{
 	text-align: center;	
@@ -796,6 +795,7 @@ transform: rotatey(180deg);
 	}
 		
 		
+	
 
 	.italic{
 	margin-top: 3%;
@@ -808,8 +808,104 @@ transform: rotatey(180deg);
 		
 	}
 
+	________________
+	
+	
+	#cabecera-empleo{
+		background-image: url(../img/empleo2.png);
+		
+	}
+
+	#bloque-empleo{
+		text-align: center;
+		padding-bottom: 5%;
+	}
 
 
-.alta a{
-	color: #fff;
-}
+	#bloque-empleo h2{
+		margin-top: 5%;
+		font-weight: bold;
+		
+	}
+	
+	#bloque-empleo h3{
+		margin-top: 12%;
+		font-weight: bold;
+		
+	}
+		
+	
+	#bloque-empleo h4{
+		margin-top: 12%;
+		font-weight: bold;
+	}
+	
+	#bloque-empleo h5{
+		
+		margin-bottom: 3%;
+	}
+
+	.look{
+		text-align: center;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+
+	#caja-empleo{
+		padding: 4%;
+		text-align: justify;
+	border: 1px solid black;
+	}
+
+	#caja-empleo h5{
+		font-weight: bold;
+	}
+
+	#caja-empleo i{
+		padding-left: 50%;
+		font-weight: bold;
+		font-size: x-large;
+		margin-top: 5%;
+	
+	}
+
+	.desplegable-empleo{
+		display: none;
+	}
+
+	.desplegable-empleo h5{
+		text-align: justify;
+		padding-top: 3%;
+		text-decoration: underline;
+
+	}
+	
+	.desplegable-empleo h6{
+		text-align: justify;
+		padding: 3%;
+		font-style: italic;
+		font-weight: bold;
+
+	}
+	
+	.desplegable-empleo button{
+		background-color: #fff;
+		color:#000000;
+		border: 2px solid;
+		font-weight: bold;
+		
+	}
+
+	.fa-plus{
+		cursor: pointer;
+		font-weight: bold;
+		font-size: x-large;
+		margin-top: 2%;
+	}
+
+	.fa-times{
+	cursor: pointer;
+	}
+
+

@@ -23,6 +23,11 @@ public class HomeController {
 		return "landing";
 	}
 	
+	@GetMapping("/empleo")
+	public String viewEmpleo() {
+		return "empleo";
+	}
+	
 	
 	
 		

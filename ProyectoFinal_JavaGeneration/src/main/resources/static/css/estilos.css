@@ -94,7 +94,15 @@ img{
 	border-top: 2px dashed rgb(224, 157, 12);
 }
 
+
+#equipo img{
+	width:50%;
+	margin: auto;
+}
+
+
 .btn-success {
+
   color: #fff;
   background-color:rgb(224, 157, 12);
   width: 15vh;
@@ -251,41 +259,32 @@ img{
     width: 100%;
 	
 }
-
-
-#real{
+.team{
 	text-align: center;
+	padding-bottom: 2%;
+	
+	
 }
 
-#real h3{
+
+.team img{
+	border: 1px solid black;
+	
+}
+.team h3{
 	padding-top: 3%;
 }
 
-#real h5{
+.team h5{
 	font-style: italic;
 	font-weight: bold;
 }
 
-#real p{
+.team p{
 	text-align: center;
 }
 
-#falso{
-	text-align: center;
-}
 
-#falso h3{
-	padding-top: 3%;
-}
-
-#falso h5{
-	font-style: italic;
-	font-weight: bold;
-}
-
-#falso p{
-	text-align: center;
-}
 
 #fondo-empresas{
 	background-color: rgba(230, 221, 221, 0.815);
@@ -366,14 +365,14 @@ img{
 }
 
 #movieflix{
-	background-image: url(../img/movieflixhover.jpg);
+	background-image: url(../img/movieflixhover3.png);
 	transition: all 0.5s ease-in;
 	border:2px dashed rgb(224, 157, 12);
 }
 
 
 #movieflix:hover{
-	background-image: url(../img/movieflix.jpg);
+	background-image: url(../img/movieflix3.png);
 	border: none;
 	
 	
@@ -381,97 +380,100 @@ img{
 }
 
 #landing{
-	background-image: url(../img/landinghover.jpg);
+	background-image: url(../img/landinghover2.png);
 	transition: all 0.5s ease-in;
 	border:2px dashed rgb(224, 157, 12);
 }
 
 
 #landing:hover{
-	background-image: url(../img/landing.jpg);
+	background-image: url(../img/landing2.png);
 	border:2px dashed rgb(224, 157, 12);
 	border: none;
 }
 
-#web{
-	background-image: url(../img/weebhover.jpg);
-	transition: all 0.5s ease-in;
-	border:2px dashed rgb(224, 157, 12);
-}
-#web:hover{
-	background-image: url(../img/weeb.jpg);
-	border:2px dashed rgb(224, 157, 12);
-	border: none;
-}
+
 
 #fiber{
-	background-image: url(../img/fiberhover.jpg);
+	background-image: url(../img/fiberhover3.png);
 	transition: all 0.5s ease-in;
 	border:2px dashed rgb(224, 157, 12);
 }
 
 #fiber:hover{
-	background-image: url(../img/fiber.jpg);
+	background-image: url(../img/fiber3.png);
 	border:2px dashed rgb(224, 157, 12);
 	border: none;
 }
 
 #corte{
-	background-image: url(../img/corte2hover.png);
+	background-image: url(../img/corte4hover.png);
 	transition: all 0.5s ease-in;
 	border:2px dashed rgb(224, 157, 12);
 }
 
 #corte:hover{
-	background-image: url(../img/corte2.png);
+	background-image: url(../img/corte4.png);
 	border:2px dashed rgb(224, 157, 12);
 	border: none;
 }
 
 #neutrales{
-	background-image: url(../img/neutraleshover.jpg);
+	background-image: url(../img/neutraleshover2.png);
 	transition: all 0.5s ease-in;
 	border:2px dashed rgb(224, 157, 12);
 }
 
 #neutrales:hover{
-	background-image: url(../img/neutrales.jpg);
+	background-image: url(../img/neutrales2.png);
 	border:2px dashed rgb(224, 157, 12);
 	border: none;
 }
 
 #pwc{
-	background-image: url(../img/pwchover.jpg);
+background-image: url(../img/pwchover2.png);
 	transition: all 0.5s ease-in;
 	border:2px dashed rgb(224, 157, 12);
 }
 
 #pwc:hover{
-	background-image: url(../img/pwc.jpg);
+	background-image: url(../img/pwc2.png);
 	border:2px dashed rgb(224, 157, 12);
 	border: none;
 }
 
 #telecinco{
-	background-image: url(../img/telecincohover.jpg);
+	background-image: url(../img/t5hover.png);
 	transition: all 0.5s ease-in;
 	border:2px dashed rgb(224, 157, 12);
 }
 
 #telecinco:hover{
-	background-image: url(../img/telecinco.jpg);
+	background-image: url(../img/t5.png);
 	border:2px dashed rgb(224, 157, 12);
 	border: none;
 }
 
 #porcelanosa{
-	background-image: url(../img/porcelanosahover.jpg);
+		background-image: url(../img/porcelanosahover2.png);
 	transition: all 0.5s ease-in;
 	border:2px dashed rgb(224, 157, 12);
 }
 
 #porcelanosa:hover{
-	background-image: url(../img/porcelanosa.jpg);
+	background-image: url(../img/porcelanosa2.png);
+	border:2px dashed rgb(224, 157, 12);
+	border: none;
+}
+
+#santander{
+	background-image: url(../img/santander2hover.png);
+	transition: all 0.5s ease-in;
+	border:2px dashed rgb(224, 157, 12);
+}
+
+#santander:hover{
+	background-image: url(../img/santander2.png);
 	border:2px dashed rgb(224, 157, 12);
 	border: none;
 }
@@ -644,6 +646,169 @@ transform: rotatey(180deg);
 	margin-right: 10%;
 }
 
+
+#contacto{
+	text-align: center;	
+	height: auto;
+	
+}
+
+
+#contacto h2{
+	font-weight: bold;
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 1%;	
+}
+
+#contacto h3{
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 2%;
+	padding-top: 3%;;
+	border-top: 2px dashed rgb(224, 157, 12);
+}
+
+#contacto h5{
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 2%;
+	padding-top: 3%;;
+	
+}
+
+#contacto i{
+	color:rgb(224, 157, 12);
+	font-size: 2.5em;
+	margin-bottom: 5%;
+
+}
+
+#contacto p{
+	text-align: center;
+
+	margin-bottom: 10%;
+}
+
+#contacto button{
+
+	background-color:rgb(236, 166, 14);
+	border: none;
+	transition: all 0.5s ease-in;
+	margin-bottom: 5%;
+	
+}
+
+#contacto button:hover{
+
+	background-color:rgb(0, 0, 0);
+	border: none;
+	
+	
+}
+
+#contacto input{
+	
+	border: 1px solid rgb(236, 166, 14);
+}
+
+#message{
+	border: 1px solid rgb(236, 166, 14);
+}
+
+.map-container{
+	overflow:hidden;
+	padding-bottom:56.25%;
+	position:relative;
+	height:0;
+	margin: 5%;
+	
+	}
+	.map-container iframe{
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	position:absolute;
+	}
+
+	
+	#cabecera-landing{
+		background-image: url(../img/landingpc2.png);
+		height: auto;
+		background-position: center top;
+	
+		background-repeat: no-repeat;
+		background-size: cover;
+		font-family: 'Montserrat', sans-serif;
+		padding: 15%;
+		margin-top: 5%;
+		margin-bottom: -8%;
+		
+	}
+
+	#cabecera-landing h1{
+		text-align: right;
+		font-weight: 900;
+		margin-left: -5%;
+	}
+
+	
+	#bloque-landing{
+		text-align: center;
+		padding-bottom: 5%;
+	}
+
+	#bloque-landing h2{
+		font-weight: bold;
+		font-style: italic;
+	}
+	
+	#bloque-landing h3{
+		margin-top: 12%;
+		font-weight: bold;
+	}
+		
+	
+	#bloque-landing h4{
+		margin-top: 12%;
+		font-weight: bold;
+	}
+	
+	#bloque-landing h5{
+		
+		font-weight: bold;
+	}
+
+	#bloque-landing p{
+		text-align: center;
+	}
+
+	#bloque-landing i{
+		text-align: justify;
+		color:rgb(87, 161, 13);
+		font-size: xx-large;
+		margin: 5%;
+	}
+
+	#bloque-landing img{
+		margin-left: -15%;
+	}
+		
+		
+	
+
+	.italic{
+	margin-top: 3%;
+		font-style: italic;
+		font-weight: lighter;
+	}
+
+	.caja-landing{
+		margin: 5%;
+		
+	}
+
 th {
 	text-align: center;
 }
@@ -655,3 +820,4 @@ btn-outline-secondary {
 btn-outline-danger {
 	color: #fff;
 }
+

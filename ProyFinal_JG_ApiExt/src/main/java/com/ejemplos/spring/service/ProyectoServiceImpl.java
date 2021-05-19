@@ -48,7 +48,14 @@ public class ProyectoServiceImpl implements ProyectoService {
 	
 	@Override
 	public Proyecto proyectoPorId(int id) {
-		return proyectoRepo.getOne(id);
+		Proyecto noencontrado = null;
+		List<Proyecto> proyectos = proyectoRepo.findAll();
+		for (Proyecto proyecto : proyectos) {
+			if(proyecto.getId()== id) {
+				return proyecto;
+			}
+		}
+		return noencontrado;
 	}
 	
 	

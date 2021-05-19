@@ -107,6 +107,8 @@
 									<h5 th:text="${proyecto.fechafin}"></h5>
 									<p th:text="${proyecto.resumen}"></p>
 									<p th:text="${proyecto.descripcion}"></p>
+									<i class="fas fa-times-circle"></i>
+							
 								</div>
 							</div>
 						</div>
@@ -229,20 +231,22 @@
 
 
 		<script>
-			$('.caja-acorddion:not(:first)').hide();
+			$('.caja-acorddion').hide();
 
 			$('.fa-plus-circle').on('click', desplegar);
 
-			function desplegar() {
-				//$(this).next().clearQueue().stop().slideToggle(600);
-				debugger;
-				var aux = $(this);
-				var next = aux.next();
-				next.toggle();
-			}
+            function desplegar() {
+                //$(this).next().clearQueue().stop().slideToggle(600);
+               
+                var aux = $(this);
+                var next = aux.next();
+                next.toggle();
+            }
 
-		</script>
-
+          $(".fa-times-circle").click(function () {
+                $(".caja-acorddion").css("display", "none");
+            });
+        </script>
 
 
 

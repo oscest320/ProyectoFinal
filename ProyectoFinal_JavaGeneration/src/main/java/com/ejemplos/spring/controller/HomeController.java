@@ -13,8 +13,19 @@ public class HomeController {
 		return "home";
 	}
 	
-	/*@GetMapping("/proyectos/movieflix"){
+	@GetMapping("/proyectos/movieflix")
+	public String viewMovieFlix() {
+		return "movieflix";
+	}
+	
+	@GetMapping("/proyectos/landing")
+	public String viewLanding() {
+		return "landing";
+	}
+	
+	
+	
 		
-	}*/
+	
 	
 }

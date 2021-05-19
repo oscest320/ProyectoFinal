@@ -36,4 +36,16 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 			empleadoRepo.save(empleado);	
 		}
 
+	//Metodo para editar un empleado
+		@Override
+		public Empleado editarEmpleado(int id) {
+			return empleadoRepo.getOne(id);
+		}
+
+	//Metodo para eliminar un empleado por id
+		@Override
+		public void eliminarEmpleado(int id) {
+			empleadoRepo.deleteById(id);
+		}
+
 }

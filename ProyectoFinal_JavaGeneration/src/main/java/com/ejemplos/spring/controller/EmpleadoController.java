@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ejemplos.spring.model.Empleado;
@@ -68,12 +70,11 @@ public class EmpleadoController {
 		List<EmpleadoFalso> listaEmplFalsos = new ArrayList<>();
 		listaEmplFalsos.addAll(serv.leerEmplFalsosCollection());
 		m.addAttribute("listaEmpFalsos", listaEmplFalsos);
-			
+		
 		return "equipo";
 	}
 
-//Metodo para dar de alta nuevos empleados
-	
+	//Metodo para dar de alta nuevos empleados
 	@GetMapping("/admin/equipo/alta")
 	public String altaEmpleado(Empleado empleado, Model m) {
 		log.info("----- Entrando en altaEmpleado");
@@ -81,12 +82,31 @@ public class EmpleadoController {
 		return "adminEquipoAlta";
 	}
 	
-//Metodo para guardar un nuevo empleado
-	
+	//Metodo para guardar un nuevo empleado
 	@PostMapping("/guardarEmpleado")
 	public ModelAndView guardarEmpleado(Empleado empleado) {
 		log.info("----- Entrando en guardaEmpleado");	
 		service.guardarEmpleado(empleado);
 		return new ModelAndView("redirect:/admin/equipo");
 	}
-}
+	
+	//Metodo para editar un empleado
+	@GetMapping("/editar")
+	public String editarEmpleado(@RequestParam("id") int id, Model m) {
+		log.info("----- Entrando en editarEmpleado");
+		m.addAttribute("empleado", service.editarEmpleado(id));
+		m.addAttribute("cargos", cargos.listarCargos());
+		return "adminEquipoAlta";
+	}
+	
+	//Metodo para eliminar un empleado
+	@GetMapping("/eliminar")
+	public ModelAndView eliminarEmpleado(@RequestParam("id")int id) {
+		log.info("----- Entrando en eliminarEmpleado");
+		service.eliminarEmpleado(id);
+		return new ModelAndView("redirect:/admin/equipo");
+		}
+	}
+	
+	
+

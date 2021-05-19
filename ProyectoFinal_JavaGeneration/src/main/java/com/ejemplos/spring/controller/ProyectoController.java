@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ejemplos.spring.model.Cliente;
@@ -118,5 +119,26 @@ public class ProyectoController {
 		return new ModelAndView("redirect:/admin/proyectos");
 	}
 	
-
+	/*
+	//Metodo para editar un proyecto
+	@GetMapping("/editar")
+	public String editarProyecto(@RequestParam("id") int id, Model m) {
+			log.info("----- Entrando en editarProyecto");
+			m.addAttribute("proyecto", service.editarProyecto(id));
+			m.addAttribute("clientes", clienteService.leerClientesCollection());
+			return "adminProyectosAlta";
+		}
+		
+	//Metodo para eliminar un empleado
+	@GetMapping("/eliminar")
+	public ModelAndView eliminarProyectos(@RequestParam("id")int id) {
+		log.info("----- Entrando en eliminarProyecto");
+		service.eliminarProyecto(id);
+			return new ModelAndView("redirect:/proyectos");
+	}
+	*/
 }
+		
+	
+
+

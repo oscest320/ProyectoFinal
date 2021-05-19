@@ -13,11 +13,10 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     
-    <link rel="stylesheet" href="/css/estilos.css">
     
-	<!--links de los iconos (fontawesome)-->
-    <script src="https://kit.fontawesome.com/11d96a27eb.js" crossorigin="anonymous"></script>
     
+	
+
 	<title>BackOffice</title>
 </head>
 <body>
@@ -48,7 +47,6 @@
 						<th> Descripción </th>
 						<th> Imagen </th>
 						<th> Cliente </th>
-						<th> Opciones </th>
 					</tr>
 				</thead>
 				<tbody>
@@ -60,24 +58,13 @@
 						<td th:text="${proyecto.descripcion}" />
 						<td th:text="${proyecto.imagen}" />
 						<td th:text="${proyecto.cliente.getNombre()}" />
-						<td><a class="btn btn-outline-secondary" th:href="@{/editar(id=${proyecto.id})}">
-								<i class="fas fa-edit"></i>
-							</a>
-						</td>
-						<td>
-							<a class="btn btn-outline-danger" th:href="@{/eliminar(id=${proyecto.id})}">
-								<i class="fas fa-trash-alt"></i>
-							</a>
-						</td>
-						<!--<td><a th:href="@{/editar(id=${proyecto.id})}">Modificar</a> | 
-                    		<a th:href="@{/eliminar(id=${proyecto.id})}">Eliminar</a></td>-->
 					</tr>
 				</tbody>
 			</table>
 			
 
 				
-				<button type="button" class="btn btn-success"><a href="/admin/proyectos/alta">Alta proyecto</a></button>
+				<button type="button" class="btn btn-outline-primary"><a href="/admin/proyectos/alta">Alta proyecto</a></button>
 
 		
 			

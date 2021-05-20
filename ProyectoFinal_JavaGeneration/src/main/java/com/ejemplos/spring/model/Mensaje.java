@@ -29,6 +29,7 @@ public class Mensaje {
 	
 	private String mensaje;
 	private String respuesta;
+	private Boolean respondido;
 	
 	public Mensaje() {
 	}
@@ -81,15 +82,18 @@ public class Mensaje {
 		this.respuesta = respuesta;
 	}
 
+	public Boolean getRespondido() {
+		return respondido;
+	}
+
+	public void setRespondido(Boolean respondido) {
+		this.respondido = respondido;
+	}
+
 	@Override
 	public String toString() {
 		return "Mensaje [id=" + id + ", nombre=" + nombre + ", fecha=" + fecha + ", asunto=" + asunto + ", mensaje="
-				+ mensaje + ", respuesta=" + respuesta + "]";
+				+ mensaje + ", respuesta=" + respuesta + ", respondido=" + respondido + "]";
 	}
 
-	
-	
-	
-	
-	
 }

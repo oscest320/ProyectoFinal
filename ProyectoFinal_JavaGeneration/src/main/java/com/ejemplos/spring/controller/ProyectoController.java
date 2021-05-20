@@ -130,7 +130,7 @@ public class ProyectoController {
 			List<Cliente> listaClientesOrdenados = new ArrayList<>();
 			listaClientes = clienteService.leerClientesCollection();
 			for (Cliente cliente : listaClientes) {
-				if (cliente.equals(proyectoSeleccionado.getCliente())) {
+				if (cliente.getId()==proyectoSeleccionado.getCliente().getId()) {
 					listaClientesOrdenados.add(0, cliente);
 				} else {
 					listaClientesOrdenados.add(cliente);

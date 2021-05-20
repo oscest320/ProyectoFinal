@@ -9,19 +9,27 @@ public class EmpleadoFalso {
 	private String resumen;
 	private String foto;
 	private String cargo;
+	private String prefijo;
+	private String foto2;
 
 	public EmpleadoFalso() {
 	}
 
-	public EmpleadoFalso(int id, String nombre, String apellidos, String resumen, String foto, String cargo) {
-		super();
+	
+
+	public EmpleadoFalso(int id, String nombre, String apellidos, String resumen, String foto, String cargo,
+			String prefijo) {
 		this.id = id;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.resumen = resumen;
 		this.foto = foto;
 		this.cargo = cargo;
+		this.prefijo = prefijo;
+		this.foto2 = asignarFoto();
 	}
+
+
 
 	public int getId() {
 		return id;
@@ -71,10 +79,47 @@ public class EmpleadoFalso {
 		this.cargo = cargo;
 	}
 
+	public String getPrefijo() {
+		return prefijo;
+	}
+
+	public void setPrefijo(String prefijo) {
+		this.prefijo = prefijo;
+	}
+
+	
+
+	public String getFoto2() {
+		return foto2;
+	}
+
+
+
+	public void setFoto2(String foto2) {
+		this.foto2 = foto2;
+	}
+
+
+
+	public String asignarFoto() {
+		char fin = this.nombre.substring(this.nombre.length()-1).charAt(0);
+		if(fin =='a') {
+			return "https://randomuser.me/api/portraits/women/" + id +".jpg";
+		}else{
+			return "https://randomuser.me/api/portraits/men/" + id +".jpg";
+		}
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "Empleado [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", resumen=" + resumen
-				+ ", foto=" + foto + ", cargo=" + cargo + "]";
+		return "EmpleadoFalso [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", resumen=" + resumen
+				+ ", foto=" + foto + ", cargo=" + cargo + ", prefijo=" + prefijo + ", foto2=" + foto2 + "]";
 	}
+
+
+	
+	
 
 }

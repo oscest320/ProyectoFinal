@@ -13,8 +13,11 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     
+    <link rel="stylesheet" href="/css/estilos.css">
     
-    
+	<!--links de los iconos (fontawesome)-->
+    <script src="https://kit.fontawesome.com/11d96a27eb.js" crossorigin="anonymous"></script>
+       
 	
 
 	<title>BackOffice</title>
@@ -46,6 +49,7 @@
 						<th> Asunto </th>
 						<th> Mensaje </th>
 						<th> Respuesta </th>
+						<th class="opc"> Respondido/Responder </th>
 					</tr>
 				</thead>
 				<tbody>
@@ -55,7 +59,14 @@
 						<td th:text="${mensaje.fecha}" />
 						<td th:text="${mensaje.asunto}" />
 						<td th:text="${mensaje.mensaje}" />
-						<td th:text="${mensaje.respuesta}" />
+						<td th:text="${mensaje.respuesta}"></td>
+						<td><input type="checkbox" name="cuchara"
+						onchange="getrespondido(this)" th:checked="${mensaje.respondido}" />
+						&nbsp&nbsp&nbsp&nbsp&nbsp
+						<a class="btn btn-outline-secondary" th:href="@{/admin/mensajes/responder(id=${mensaje.id})}">
+								<i class="fas fa-edit"></i>
+							</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>

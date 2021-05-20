@@ -144,8 +144,8 @@
 				
 			<!--<img th:src="@{'https://thispersondoesnotexist.com/image?random=' + ${emplFalso.id}}" alt=""> -->
 				
-				<img th:src="@{'https://randomuser.me/api/portraits/men/' + ${emplFalso.id}} +'.jpg'" alt=""> 
-				
+			<!--  	<img th:src="${emplFalso.genero} ? '@{'https://randomuser.me/api/portraits/women/' + ${emplFalso.id}} +'.jpg'' : '@{'https://randomuser.me/api/portraits/men/' + ${emplFalso.id}} +'.jpg''" alt=""> --> 
+				<img th:src="${emplFalso.foto2}" alt="">
 					<h3 th:text="${emplFalso.nombre} + ' ' + ${emplFalso.apellidos}"></h3>
 					<h5 th:text="${emplFalso.cargo}"></h5>
 					<p th:text="${emplFalso.resumen}"></p> 

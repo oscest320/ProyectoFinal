@@ -107,8 +107,10 @@
 									<h5 th:text="${proyecto.fechafin}"></h5>
 									<p th:text="${proyecto.resumen}"></p>
 									<p th:text="${proyecto.descripcion}"></p>
-									<i class="fas fa-times-circle"></i>
-							
+									<a class="enlace" th:href="${proyecto.link}">Ver más</a>
+									</br>
+										<i class="fas fa-times-circle"></i>
+
 								</div>
 							</div>
 						</div>

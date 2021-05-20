@@ -46,9 +46,11 @@
 						<th> Fecha fin </th>
 						<th> Resumen </th>
 						<th> Descripción </th>
+						<th> Link </th>
 						<th> Imagen </th>
 						<th> Cliente </th>
 						<th> Opciones </th>
+						<th> </th>
 					</tr>
 				</thead>
 				<tbody>
@@ -58,6 +60,7 @@
 						<td th:text="${proyecto.fechafin}" />
 						<td th:text="${proyecto.resumen}" />
 						<td th:text="${proyecto.descripcion}" />
+						<td th:text="${proyecto.link}" />
 						<td th:text="${proyecto.imagen}" />
 						<td th:text="${proyecto.cliente.getNombre()}" />
 						<td><a class="btn btn-outline-secondary" th:href="@{/admin/proyectos/editar(id=${proyecto.id})}">

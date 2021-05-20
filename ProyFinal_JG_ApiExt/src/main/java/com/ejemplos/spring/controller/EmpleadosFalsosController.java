@@ -29,7 +29,7 @@ public class EmpleadosFalsosController {
 		List<EmpleadoFalso> empl = new ArrayList<>();
 		for (int i = 0; i < 21; i++) {
 			empl.add(new EmpleadoFalso(i + 1, faker.name().firstName(), faker.name().lastName(),
-					faker.job().keySkills(), faker.internet().avatar(), faker.name().title()));
+					faker.job().keySkills(), faker.internet().avatar(), faker.name().title(), faker.name().prefix()));
 		}
 
 		return empl;

@@ -19,6 +19,7 @@ public class Proyecto {
 	private String fechafin;
 	private String resumen;
 	private String descripcion;
+	private String link;
 	private String imagen;
 	
 	
@@ -69,6 +70,14 @@ public class Proyecto {
 		this.descripcion = descripcion;
 	}
 
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
 	public String getImagen() {
 		return imagen;
 	}
@@ -88,8 +97,11 @@ public class Proyecto {
 	@Override
 	public String toString() {
 		return "Proyecto [id=" + id + ", proyecto=" + proyecto + ", fechafin=" + fechafin + ", resumen=" + resumen
-				+ ", descripcion=" + descripcion + ", imagen=" + imagen + ", cliente=" + cliente + "]";
+				+ ", descripcion=" + descripcion + ", link=" + link + ", imagen=" + imagen + ", cliente=" + cliente
+				+ "]";
 	}
+
+	
 	
 	
 	

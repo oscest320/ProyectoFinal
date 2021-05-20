@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ejemplos.spring.model.Empleado;
@@ -78,8 +79,22 @@ public class MensajeController {
 		mensajeRequest.setMensaje(mensaje);
 		mensajeRequest.setNombre(nombre);
 		service.guardarMensaje(mensajeRequest);
-		return new ModelAndView("redirect:/admin/mensajes");
+		return new ModelAndView("redirect:/contacto");
 	}
 	
+	//Metodo para guardar respuesta del mensjae
+		@PostMapping("/admin/mensajes/responder")
+		public ModelAndView guardarMensaje(@RequestParam("id")int id) {
+			log.info("----- Entrando en guardaRespuesta");
+			List<Mensaje> mensajes = service.listarMensajes();
+			Mensaje mensaje = null;
+			for(Mensaje msn : mensajes) {
+				if(msn.getId()== id) {
+					mensaje=msn;
+				}
+			}
+			service.guardarMensaje(mensaje);
+			return new ModelAndView("redirect:/admin/mensajes");
+		}
 	
 }
